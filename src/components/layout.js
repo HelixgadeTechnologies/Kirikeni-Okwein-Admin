@@ -9,7 +9,7 @@ const Layout = ({ children, isActivePage }) => {
       <Sidebar isActivePage={isActivePage} />
       <div className="flex-grow px-10 py-3">
       <TopBar/>
-      <Header/>
+      
         {/* Main content */}
         {children}
       </div>

@@ -6,7 +6,7 @@ import CallIcon from '@mui/icons-material/Call';
 const Sidebar = ({isActivePage}) => {
     // const isActivePage = "true";
   return (
-    <div className="flex flex-col w-[290px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 relative">
+    <div className="flex flex-col w-[290px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ">
       <div className="flex justify-between px-3">
         <div className="h-7 w-7 bg-white rounded-full"></div>
         <div className="h-7 w-7 bg-white rounded-full"></div>

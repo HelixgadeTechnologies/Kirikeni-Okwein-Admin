@@ -2,6 +2,7 @@ import CourseCard from '@/components/CourseCard';
 import Layout from '@/components/layout'
 import React from 'react'
 import SearchIcon from "@mui/icons-material/Search";
+import Header from '@/components/Header';
 
 function CourseManagement() {
     const cardData = [
@@ -40,6 +41,7 @@ function CourseManagement() {
       
   return (
     <Layout isActivePage="COURSES MANAGEMENT">
+      <Header/>
         <p className='text-[16px] pt-5'>Courses</p>
       <div className='bg-white mt-5 overflow-scroll max-h-[400px] scrollbar scrollbar-thumb-gray-500 scrollbar-track'>
       <div className="p-8">

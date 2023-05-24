@@ -17,7 +17,6 @@ const Modal = ({ isOpen, link }) => {
         <h1 className='text-4xl py-2'>Reset successful</h1>
         <a href={link} className='bg-[#005259] w-full py-5 px-5 text-white'>
         <button>Login</button>
-
         </a>
     </div>
   </div>
