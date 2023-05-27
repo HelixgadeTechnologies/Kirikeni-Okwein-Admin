@@ -52,7 +52,7 @@ const Sidebar = ({isActivePage}) => {
 
     </div>
     <div className="absolute bottom-[25px] left-[15px]">
-      <a className="text-[#EDAD62] bg-[#FFFFFF] bg-opacity-20 py-3 px-12 rounded">Help and Support <CallIcon style={{color:"#EDAD62"}}/></a>
+      <a className="text-[#EDAD62] bg-[#FFFFFF] bg-opacity-20 py-3 px-12 rounded" href="/app/support">Help and Support <CallIcon style={{color:"#EDAD62"}}/></a>
     </div>
     </div>
   );

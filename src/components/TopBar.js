@@ -9,7 +9,7 @@ function TopBar() {
   return (
     <div className='flex justify-between '>
       <p className='text-[#5141A4] py-2'>Home</p>
-      <div className="relative inline-block">
+      <div className=" inline-block">
       <button className="flex items-center focus:outline-none bg-white rounded-full px-5 py-2 border" onClick={handleSwitch}> 
         <Image className="w-8 h-8 rounded-full mr-2" src={profile} alt="Profile" />
         <span className="text-gray-800">John Doe</span>

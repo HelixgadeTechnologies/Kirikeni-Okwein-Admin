@@ -5,7 +5,7 @@ import React from 'react'
 function Analytics() {
   return (
     <Layout isActivePage="ANALYTICS">
-      <Header/>
+      <Header></Header>
     </Layout>
   )
 }
