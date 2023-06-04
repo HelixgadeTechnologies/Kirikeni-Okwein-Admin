@@ -49,6 +49,10 @@ const Sidebar = ({isActivePage}) => {
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className="pl-3 capitalize">ANALYTICS</p>
       </a>
+      <a className={`flex text-white py-3 px-3 my-4  ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/reports">
+        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
+        <p className="pl-3 capitalize">REPORTS</p>
+      </a>
 
     </div>
     <div className="absolute bottom-[25px] left-[15px]">
