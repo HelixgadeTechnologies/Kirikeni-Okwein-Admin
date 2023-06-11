@@ -17,7 +17,7 @@ function Analytics() {
             </div>
 
             </div>
-            {
+            {/* {
               switchOpen=="one"? <a
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl}
@@ -29,7 +29,7 @@ function Analytics() {
             >
               Add User
             </a>
-            }
+            } */}
            
           </div>
           <div className='flex flex-grow mt-3 space-x-3'>

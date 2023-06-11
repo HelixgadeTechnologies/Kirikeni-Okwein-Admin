@@ -14,11 +14,13 @@ export default function Home() {
   return (
     <>
       <div className='flex w-screen h-screen overflow-hidden'>
-        <div className='bg-[#eee] md:w-[50%] h-screen flex flex-col md:px-20 px-10 py-20 items-center justify-center text-left'>
-          <Image src={Logo} alt=""/>
-          <h1 className='font-bold text-[#003338] text-[20px] py-3'>Kirekeni Okwein</h1>
-          <h1 className='text-[#242424] text-[50px]'>Login to your Account</h1>
-          <span className='text-[#323A46] px-3'>Enter your Credentials below to get Started with the Kirikeni Okwien Admin portal.</span>
+        <div className='bg-[#eee] md:w-[50%] h-screen flex flex-col md:px-20 px-10 py-32 items-start justify-left text-left'>
+          <div className='flex flex-col justify-center items-center w-full'>
+            <Image src={Logo} alt=""/>
+            <h1 className='font-bold text-[#003338] text-[20px] py-3'>Kirekeni Okwein</h1>
+          </div>
+          <h1 className='text-[#242424] text-[45px] text-left'>Login to your Account</h1>
+          <span className='text-[#323A46] '>Enter your Credentials below to get Started with the Kirikeni Okwien Admin portal.</span>
           <form className='w-full py-10' onSubmit={handleSubmit}> 
             <div>
               <label>Email:</label>

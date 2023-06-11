@@ -922,16 +922,16 @@ function UserManagement() {
 
             </div>
             {
-              switchOpen=="one"? <a
+              switchOpen !=="one"? <a
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               onClick={ModalControl}
             >
-              <AddIcon /> Delete Admin
+              <AddIcon /> Add Sub Admin
             </a>: <a
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               onClick={ModalControl4}
             >
-              <AddIcon /> Edit Admin
+              <AddIcon /> Add User
             </a>
             }
            
@@ -1022,10 +1022,10 @@ function UserManagement() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span
-                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded ${
                         user.status
-                          ? "bg-green-100 text-green-800"
-                          : "bg-red-100 text-red-800"
+                          ? "border py-1 px-1 border-green-100 text-green-800"
+                          : "border py-1 px-1 border-red-100 text-red-800"
                       }`}
                     >
                       {user.status ? "Active" : "Inactive"}
@@ -1033,12 +1033,12 @@ function UserManagement() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <button
-                      className="text-blue-600 hover:text-blue-900"
+                      className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
                       onClick={ModalControl2}
                     >
                       View User
                     </button>
-                    <button className="ml-2 text-red-600 hover:text-red-900">
+                    <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
                       Delete
                     </button>
                   </td>
@@ -1111,15 +1111,15 @@ function UserManagement() {
 
 
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <button
-                    className="text-blue-600 hover:text-blue-900"
-                    onClick={ModalControl5}
-                  >
-                    View Admin
-                  </button>
-                  <button className="ml-2 text-red-600 hover:text-red-900">
-                    Delete
-                  </button>
+                <button
+                      className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
+                      onClick={ModalControl5}
+                    >
+                      View Admin
+                    </button>
+                    <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
+                      Delete
+                    </button>
                 </td>
               </tr>
             ))}

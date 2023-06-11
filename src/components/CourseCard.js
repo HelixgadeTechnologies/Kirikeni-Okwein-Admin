@@ -3,6 +3,7 @@ import CourseImage from "@/assets/course.png"
 import Image from 'next/image';
 const CourseCard = ({ image, heading, paragraph }) => {
   return (
+    <a href="/app/course-module">
     <div className="max-w-xs rounded overflow-hidden shadow-lg">
       <Image className="w-full" src={CourseImage} alt="Card" />
       <div className="px-6 py-4 bg-white">
@@ -10,6 +11,7 @@ const CourseCard = ({ image, heading, paragraph }) => {
         <p className="text-gray-700 text-base">{paragraph}</p>
       </div>
     </div>
+    </a>
   );
 };
 
