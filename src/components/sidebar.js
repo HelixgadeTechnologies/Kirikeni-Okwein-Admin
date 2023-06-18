@@ -5,6 +5,7 @@ import CallIcon from '@mui/icons-material/Call';
 import Logo from "@/assets/logo.png"
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Image from "next/image";
+import Link from "next/link";
 const Sidebar = ({isActivePage, classn}) => {
     // const isActivePage = "true";
   return (
@@ -31,39 +32,51 @@ const Sidebar = ({isActivePage, classn}) => {
         </div>
       </div>
     <div className="text-[]">
-      <a className={`flex text-white py-3 px-3 my-4 text-[#A1A6B1]  ${isActivePage =="DASHBOARD" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/dashboard">
+      {/* <a className={`flex text-white py-3 px-3 text-[#A1A6B1] border-b border-[#A1A6B1]  ${isActivePage =="DASHBOARD" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/dashboard">
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="DASHBOARD" ? 'text-white' : 'text-[#A1A6B1]'}`}>DASHBOARD</p>
-      </a>
-      <a className={`flex text-white py-3 pl-3 my-4  ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } href="/app/courses-management">
-        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-        <p className={`pl-2 capitalize ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
-      </a>
-      <a className={`flex text-white py-3 px-3 my-4  ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/user-management">
-        <DashboardCustomizeIcon style={{margin:"0 10px"}} />
-        <p className={`pl-2 capitalize  ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
-      </a>
-      <a className={`flex text-white py-3 px-3 my-4  ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/chat">
-        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-        <p className={`pl-2 capitalize  ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
-      </a>
-      <a className={`flex text-white py-3 px-3 my-4  ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/settings">
-        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-        <p className={`pl-2 capitalize  ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
-      </a>
-      <a className={`flex text-white py-3 px-3 my-4  ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/analytics">
+      </a> */}
+      <Link href="/app/courses-management" className={`flex text-white py-3 pl-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
+        {/* <a  > */}
+          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
+          <p className={`pl-2 capitalize ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
+        {/* </a> */}
+      </Link>
+      <Link href="/app/user-management" className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+        {/* <a > */}
+          <DashboardCustomizeIcon style={{margin:"0 10px"}} />
+          <p className={`pl-2 capitalize  ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
+        {/* </a> */}
+      </Link>
+      <Link href="/app/chat" className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+        {/* <a > */}
+          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
+          <p className={`pl-2 capitalize  ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
+        {/* </a> */}
+      </Link>
+      <Link href="/app/settings" className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+        {/* <a  > */}
+          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
+          <p className={`pl-2 capitalize  ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
+        {/* </a> */}
+      </Link>
+      <Link href="/app/analytics" className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      {/* <a  > */}
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
-      </a>
-      <a className={`flex text-white py-3 px-2 my-4  ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/reports">
+      {/* </a> */}
+      </Link>
+      <Link href="/app/reports" className={`flex text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      {/* <a  > */}
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>
-      </a>
+      {/* </a> */}
+      </Link>
 
     </div>
-    <div className="absolute bottom-[25px] left-[15px] w-[270px]">
+    {/* <div className="absolute bottom-[25px] left-[15px] w-[270px]">
       <a className="text-[#EDAD62] bg-[#FFFFFF] bg-opacity-20 py-3 px-10 rounded" href="/app/support">Help and Support <CallIcon style={{color:"#EDAD62"}}/></a>
-    </div>
+    </div> */}
     </div>
   );
 };

@@ -1,5 +1,9 @@
+// import DonutChart from '@/components/DonutChart';
+import AppBarChart from '@/components/BarChart';
+import DonutChart from '@/components/DonutChart';
 import Header from '@/components/Header'
 import Layout from '@/components/layout'
+import AppLineChart from '@/components/LineChart';
 import React, { useState } from 'react'
 
 function Analytics() {
@@ -17,7 +21,7 @@ function Analytics() {
             </div>
 
             </div>
-            {/* {
+            {
               switchOpen=="one"? <a
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl}
@@ -29,7 +33,7 @@ function Analytics() {
             >
               Add User
             </a>
-            } */}
+            }
            
           </div>
           <div className='flex flex-grow mt-3 space-x-3'>
@@ -58,33 +62,33 @@ function Analytics() {
         </Header>
         {
           switchOpen=="one"?
-          <div className=' mt-5 flex overflow-scroll overflow-x-auto w-fit max-h-[4000px] scrollbar scrollbar-thumb-gray-500 scrollbar-track'>
+          <div className=''>
           <div className=' w-full h-[316px] mt-5 flex '>
             <div className='bg-white w-[70%] h-full'>
-
+              <AppLineChart/>
             </div>
             <div className='bg-white w-[28%] h-full ml-[20px]'>
-
+              <DonutChart/>
             </div>
 
           </div>
           <div className='bg-white w-full w-[900px] h-[316px] mt-5'>
-
+            <AppBarChart/>
           </div>
           </div>
           :switchOpen=="two"?
-          <div className=' mt-5 flex overflow-scroll overflow-x-auto w-fit max-h-[4000px] scrollbar scrollbar-thumb-gray-500 scrollbar-track'>
+          <div className=''>
           <div className=' w-full h-[316px] mt-5 flex '>
             <div className='bg-white w-[70%] h-full'>
-
+              <AppLineChart/>
             </div>
             <div className='bg-white w-[28%] h-full ml-[20px]'>
-
+              <DonutChart/>
             </div>
 
           </div>
           <div className='bg-white w-full w-[900px] h-[316px] mt-5'>
-
+            <AppBarChart/>
           </div>
           </div>
           :""
