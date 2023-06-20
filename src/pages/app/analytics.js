@@ -4,7 +4,6 @@ import DonutChart from '@/Components/DonutChart';
 import Header from '@/Components/Header'
 import Layout from '@/Components/Layout'
 import AppLineChart from '@/Components/LineChart';
-import Link from 'next/link';
 import React, { useState } from 'react'
 
 function Analytics() {
