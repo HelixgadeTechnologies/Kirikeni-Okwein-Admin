@@ -3,7 +3,6 @@ import Layout from "@/Components/Layout";
 import Modal2 from "@/Components/Modal2";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import Link from "next/link";
 
 function UserManagement() {
   const users = [
@@ -56,6 +55,7 @@ function UserManagement() {
       status: false,
     },
   ];
+
   const admins = [
     {
       id: 1,
@@ -74,6 +74,7 @@ function UserManagement() {
       role: "Manager",
     },
   ];
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

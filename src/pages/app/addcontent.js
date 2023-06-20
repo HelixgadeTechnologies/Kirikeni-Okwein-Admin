@@ -1,11 +1,11 @@
-import Layout from "@/Components/Layout";
 import React, { useState } from "react";
+import Layout from "@/Components/Layout";
 import Header from "@/Components/Header";
 import Modal2 from "@/Components/Modal2";
 import WestIcon from '@mui/icons-material/West';
 import Link from "next/link";
 
-function addContent() {
+function addcontent() {
   const [switchOpen, setSwitchOpen] = useState("one");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const ModalControl = () => {
@@ -130,7 +130,7 @@ function addContent() {
         
       </Header>
       <div className="flex space-x-4 my-5 items-center">
-        <Link href="/app/course-module">
+        <Link href={"/app/course-module"}>
           <WestIcon />
         </Link>
         <div className=" my-1 bg-white py-2 px-4">
@@ -185,4 +185,4 @@ function addContent() {
   );
 }
 
-export default addContent;
+export default addcontent;
