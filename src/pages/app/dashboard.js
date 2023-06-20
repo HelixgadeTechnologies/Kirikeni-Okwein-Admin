@@ -1,5 +1,5 @@
-import Header from '@/Components/Header'
-import Layout from '@/Components/Layout'
+import Header from '@/components/Header'
+import Layout from '@/components/Layout'
 import React from 'react'
 
 function dashboard() {

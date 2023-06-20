@@ -1,5 +1,5 @@
-import Header from "@/Components/Header";
-import Layout from "@/Components/Layout";
+import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import WestIcon from "@mui/icons-material/West";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatUser from "@/assets/chat-user.png"
 import DoneAllIcon from '@mui/icons-material/DoneAll';
-import ChatBox from "@/Components/ChatBox";
+import ChatBox from "@/components/ChatBox";
 import Link from "next/link";
 
 function Chat() {

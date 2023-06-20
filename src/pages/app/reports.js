@@ -1,9 +1,9 @@
-import Header from "@/Components/Header";
-import Layout from "@/Components/Layout";
+import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import BasicTable from "@/Components/Table";
-import Modal2 from "@/Components/Modal2";
+import BasicTable from "@/components/Table";
+import Modal2 from "@/components/Modal2";
 
 function Reports() {
   const [switchOpen, setSwitchOpen] = useState("closed");

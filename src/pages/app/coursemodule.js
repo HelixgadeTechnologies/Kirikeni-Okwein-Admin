@@ -1,11 +1,11 @@
-import CourseCard from "@/Components/CourseCard";
-import Layout from "@/Components/Layout";
+import CourseCard from "@/components/CourseCard";
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import Header from "@/Components/Header";
+import Header from "@/components/Header";
 import AddIcon from "@mui/icons-material/Add";
-import Modal2 from "@/Components/Modal2";
-import DragAndDropBox from "@/Components/DragAndDropBox";
+import Modal2 from "@/components/Modal2";
+import DragAndDropBox from "@/components/DragAndDropBox";
 import WestIcon from '@mui/icons-material/West';
 import Link from "next/link";
 

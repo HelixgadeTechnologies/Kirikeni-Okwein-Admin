@@ -1,7 +1,7 @@
 import React from 'react';
 // import Header from './Header';
 // import Sidebar from '@/components/SideBar';
-import TopBar from '@/Components/TopBar';
+import TopBar from '@/components/TopBar';
 import SideBar from './SideBar';
 
 const Layout = ({ children, isActivePage }) => {
