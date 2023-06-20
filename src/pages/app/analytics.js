@@ -4,6 +4,7 @@ import DonutChart from '@/components/DonutChart';
 import Header from '@/components/Header'
 import Layout from '@/components/layout'
 import AppLineChart from '@/components/LineChart';
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 function Analytics() {
@@ -22,17 +23,17 @@ function Analytics() {
 
             </div>
             {
-              switchOpen=="one"? <a
+              switchOpen=="one"? <Link
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl}
             >
                View Users
-            </a>: <a
+            </Link>: <Link
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl4}
             >
               Add User
-            </a>
+            </Link>
             }
            
           </div>

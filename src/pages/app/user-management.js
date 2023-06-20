@@ -4,6 +4,7 @@ import Modal2 from "@/components/Modal2";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import Tabs from "@/components/Tabs";
+import Link from "next/link";
 
 function UserManagement() {
   const users = [
@@ -922,17 +923,17 @@ function UserManagement() {
 
             </div>
             {
-              switchOpen !=="one"? <a
+              switchOpen !=="one"? <Link
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               onClick={ModalControl}
             >
               <AddIcon /> Add Sub Admin
-            </a>: <a
+            </Link>: <Link
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               onClick={ModalControl4}
             >
               <AddIcon /> Add User
-            </a>
+            </Link>
             }
            
           </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Good from "@/assets/good.png"
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Modal = ({ isOpen, link }) => {
   if (!isOpen) {
@@ -15,9 +16,9 @@ const Modal = ({ isOpen, link }) => {
         </div>
         <p className='py-2 pt-10'>DONE</p>
         <h1 className='text-4xl py-2'>Reset successful</h1>
-        <a href={link} className='bg-[#005259] w-full py-5 px-5 text-white'>
+        <Link href={link} className='bg-[#005259] w-full py-5 px-5 text-white'>
         <button>Login</button>
-        </a>
+        </Link>
     </div>
   </div>
   );

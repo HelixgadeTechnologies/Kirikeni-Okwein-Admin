@@ -7,6 +7,8 @@ import AddIcon from "@mui/icons-material/Add";
 import Modal2 from "@/components/Modal2";
 import DragAndDropBox from "@/components/DragAndDropBox";
 import WestIcon from '@mui/icons-material/West';
+import Link from "next/link";
+import { BuildTwoTone } from "@mui/icons-material";
 
 function CourseManagement() {
   const [switchOpen, setSwitchOpen] = useState("one");
@@ -124,18 +126,18 @@ function CourseManagement() {
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
           <div className="flex space-x-4">
-          <a
+          <button
                 className="text-[#005259] bg-transparent border border-gray-300  py-4 px-5 h-[56px]"
                 onClick={ModalControl}
             >
                  Save Draft
-            </a>
-            <a
+            </button>
+            <button
                 className="bg-[#005259] text-white py-4 px-5 h-[56px]"
                 onClick={ModalControl}
             >
                  Submit Lesson
-            </a>
+            </button>
 
           </div>
         </div>
@@ -159,13 +161,76 @@ function CourseManagement() {
         
       </div> */}
       </Header>
-    
-     <p className="text-[30px] pt-3">Greetings in Wakirike</p>
+      <div className="flex space-x-4 my-5 items-center">
+        <Link href="/app/course-module">
+          <WestIcon />
+        </Link>
+        <div className=" my-1 bg-white py-2 px-4">
+          <p>
+            Support Portal{" "}
+            <span className="text-[#5141A4]">/ Chat Messaging</span>
+          </p>
+        </div>
+      </div>
+      <div className="w-full h-[705px]  bg-white ">
+        <div className="flex h-full">
+          <div className="w-1/3 h-full border-r">
+            <div className="p-5 h-full">
+              {/* <h1 className="text-[20px] font-bold">Chats</h1> */}
+              {/* <div className="flex jusify-between items-center space-x-4 pt-5 my-5">
+                
+              
+              </div> */}
+              <div className="flex items-center">
+                {/* <div className=" my-1 relative">
+                  <input
+                    type="text"
+                    className="py-2 px-8 py-2 mx-[2px] pl-16 rounded-lg border border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-full  bg-[#F3F4F5] bg-opacity-20 text-[#434D64]"
+                    placeholder="Search"
+                  />
+                  <div className="absolute inset-y-0 left-3 pr-3 flex items-center pointer-events-none">
+                    <SearchIcon
+                      className="mx-5 my-4 text-gray-400 "
+                      style={{ color: "#D0D3D8" }}
+                    />
+                  </div>
+                </div> */}
+                <form className="flex flex-col space-y-3">
+                    <div className="w-full">
+                      <label>Question Type</label>
+                      <select className="border text-sm border-[#EEECF6]  text-[#434D64] py-3 px-4 w-full">
+                        <option>Select</option>
+                      </select>
+                    </div>
+
+                    <div className="w-full">
+                      <label>Answer Type</label>
+                      <select className="border text-sm border-[#EEECF6]  text-[#434D64] py-3 px-4 w-full">
+                        <option>Select</option>
+                      </select>
+                    </div>
+
+                    <div className="w-full">
+                      <label>Question Number</label>
+                      <select className="border text-sm border-[#EEECF6]  text-[#434D64] py-3 px-4 w-full">
+                        <option>Select</option>
+                      </select>
+                    </div>
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+     {/* <p className="text-[30px] pt-3">Greetings in Wakirike</p>
      <div className="flex items-center justify-between mb-6 w-full mt-4">
           <h2 className="text-[25px]">Content details</h2>
          
-        </div>
-        <form onSubmit={handleSubmit} className=" mx-auto text-left">
+        </div> */}
+        {/* <form onSubmit={handleSubmit} className=" mx-auto text-left">
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700 font-medium">
             Course Title
@@ -761,7 +826,7 @@ function CourseManagement() {
             </div>
             </div>
         </div>
-        </form>
+        </form> */}
 
 
         {/* <div className="flex justify-end w-full space-x-5">

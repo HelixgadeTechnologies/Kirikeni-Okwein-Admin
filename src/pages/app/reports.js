@@ -406,9 +406,9 @@ function Reports() {
             <div>
               <p className="text-[20px] font-bold">Reports</p>
             </div>
-            <a className="bg-[#005259] text-white py-4 px-5 h-[56px]" onClick={ModalControl6}>
+            <button className="bg-[#005259] text-white py-4 px-5 h-[56px]" onClick={ModalControl6}>
               <AddIcon /> Generate report
-            </a>
+            </button>
           </div>
         </Header>
         {switchOpen == "open" ? (

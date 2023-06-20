@@ -52,17 +52,16 @@ function support() {
 
             </div>
             {
-              switchOpen=="one"? <a
+              switchOpen=="one"? <button
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
-            //   onClick={ModalControl}
             >
               <AddIcon /> Delete Admin
-            </a>: <a
+            </button>: <button
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
             //   onClick={ModalControl4}
             >
               <AddIcon /> Edit Admin
-            </a>
+            </button>
             }
            
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import profile from "@/assets/profile.png"
 import Image from 'next/image'
+import Link from 'next/link'
 function TopBar() {
     const [isOpen, setIsOpen] = useState(false)
     const handleSwitch = () =>{
@@ -33,28 +34,28 @@ function TopBar() {
         isOpen?<div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg">
         <ul className="py-1">
           <li>
-            <a
+            <Link
               href="#"
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
             >
               Option 1
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
             >
               Option 2
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
             >
               Option 3
-            </a>
+            </Link>
           </li>
         </ul>
       </div>:null

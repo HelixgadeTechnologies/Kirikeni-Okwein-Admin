@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import patterns from "@/assets/patterns.png"
 import Logo from "@/assets/logo.png"
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -26,9 +27,9 @@ export default function Home() {
               <label>Email:</label>
               <input className='w-full border rounded py-3 px-4 mb-5 ' placeholder='Enter Email' />
             </div>
-            <a href='/otp'>
+            <Link href='/otp'>
             <button className='bg-[#005259] rounded py-5 px-2 w-full text-white'>Continue</button>
-            </a>
+            </Link>
           </form>
         </div>
         <div className='bg-[#003338] w-[50%] hidden md:block'>

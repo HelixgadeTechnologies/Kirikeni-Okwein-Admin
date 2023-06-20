@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ChatUser from "@/assets/chat-user.png"
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import ChatBox from "@/components/ChatBox";
+import Link from "next/link";
 
 function Chat() {
   const [messaging, setMessaging] = useState(true)
@@ -67,13 +68,13 @@ function Chat() {
               <p className={`pt-5 pb-3 ${switchOpen=="two"?"text-[#5141A4]  border-b border-[#5141A4]":"text-[#727A8B] "}`} onClick={()=>setSwitchOpen("two")}>Course Analytics</p>
             </div> */}
           </div>
-          <a
+          <Link
             className="bg-[#005259] text-white py-4 px-5 h-[56px]"
             // onClick={ModalControl}
           >
             <AddIcon />
             Create Ticket
-          </a>
+          </Link>
         </div>
         <div className="flex flex-grow mt-3 space-x-3">
           <div className="bg-white px-3 py-3 rounded w-full">
@@ -99,9 +100,9 @@ function Chat() {
         </div>
       </Header>
       <div className="flex space-x-4 my-5 items-center">
-        <a href="/app/course-module">
+        <Link href="/app/course-module">
           <WestIcon />
-        </a>
+        </Link>
         <div className=" my-1 bg-white py-2 px-4">
           <p>
             Support Portal{" "}

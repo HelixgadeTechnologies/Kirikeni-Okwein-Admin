@@ -185,12 +185,12 @@ function CourseManagement() {
           <div>
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
-          <a
+          <button
             className="bg-[#005259] text-white py-4 px-5 h-[56px]"
             onClick={ModalControl}
           >
             <AddIcon /> Add Course
-          </a>
+          </button>
         </div>
         {/* <div className='flex flex-grow mt-3 space-x-5'>
         <div className='bg-white px-5 py-3 rounded w-full'>
@@ -215,10 +215,10 @@ function CourseManagement() {
       <p className="text-[16px] pt-5">Courses</p>
       <div className="bg-white mt-5 overflow-scroll max-h-[500px] scrollbar scrollbar-thumb-gray-500 scrollbar-track rounded">
         <div className="p-5">
-          <div className=" my-1">
+          <div className=" my-1 relative">
             <input
               type="text"
-              className="py-2 px-8 py-2 mx-[2px] pl-16 rounded-lg border border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[500px]  bg-[#F3F4F5] bg-opacity-20 text-white"
+              className="py-2 px-8 py-2 mx-[2px] pl-16 rounded-lg border border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[500px]  bg-[#F3F4F5] bg-opacity-20 text-black"
               placeholder="Search"
             />
             <div className="absolute inset-y-0 left-3 pr-3 flex items-center pointer-events-none">

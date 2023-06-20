@@ -7,6 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Modal2 from "@/components/Modal2";
 import DragAndDropBox from "@/components/DragAndDropBox";
 import WestIcon from '@mui/icons-material/West';
+import Link from "next/link";
 
 function CourseManagement() {
   const [switchOpen, setSwitchOpen] = useState("one");
@@ -154,12 +155,12 @@ function CourseManagement() {
           <div>
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
-          <a
+          <button
             className="bg-[#005259] text-white py-4 px-5 h-[56px]"
             onClick={ModalControl}
           >
             <AddIcon /> Add Course
-          </a>
+          </button>
         </div>
         {/* <div className='flex flex-grow mt-3 space-x-5'>
         <div className='bg-white px-5 py-3 rounded w-full'>
@@ -183,9 +184,9 @@ function CourseManagement() {
       </Header>
      <div className="flex space-x-4 my-5 items-center">
 
-     <a href="/app/courses-management">
+     <Link href="/app/courses-management">
        <WestIcon/>
-      </a>
+      </Link>
       <div className=" my-1">
             <input
               type="text"
@@ -204,27 +205,27 @@ function CourseManagement() {
       <div className="bg-white mt-5 overflow-scroll max-h-[500px] scrollbar scrollbar-thumb-gray-500 scrollbar-track rounded">
         <div className="">
           <div className="">
-      <table className="border border-gray-300 w-full">
-        <thead className="bg-[#F9FAFB] text-[#727A8B]">
+      <table className="w-full">
+        <thead className="bg-[#F9FAFB] text-[#727A8B] text-left">
           <tr>
-            <th className="py-2 px-4">MODULE NUMBER</th>
-            <th className="py-2 px-4">MODULE TITLE</th>
-            <th className="py-2 px-4">MODULE DESCRIPTION</th>
-            <th className="py-2 px-4">ACTION</th>
+            <th className="py-2 pl-5">MODULE NUMBER</th>
+            <th className="py-2 pl-5">MODULE TITLE</th>
+            <th className="py-2 pl-5">MODULE DESCRIPTION</th>
+            <th className="py-2 pl-5">ACTION</th>
           </tr>
         </thead>
         <tbody className="bg-white">
           {/* Table body rows */}
           {
             [1,2,3,4,5,6,7,8,9,10].map((num,index)=>(
-                <tr key={index}>
+                <tr key={index} className={"text-[#434D64]"}>
                 <td className="py-2 px-4">Module {index + 1}</td>
                 <td className="py-2 px-4">Greetings in Wakirike</td>
                 <td className="py-2 px-4">Lorem ipsum dolor sit amet</td>
                 <td className="py-2 px-4">
-                <a className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/app/course-levels">
+                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/app/course-levels">
                     View
-                  </a>
+                  </Link>
                   <button className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2">
                     Edit
                   </button>
