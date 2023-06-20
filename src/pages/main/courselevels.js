@@ -152,7 +152,7 @@ function CourseLevels() {
       </div> */}
       </Header>
      <div className="flex space-x-4 my-5 items-center">
-      <Link href={"/app/course-module"}>
+      <Link href={"/main/course-module"}>
        <WestIcon/>
 
       </Link>
@@ -192,7 +192,7 @@ function CourseLevels() {
                 <td className="py-2 px-4">Introduction</td>
                 <td className="py-2 px-4">Lorem ipsum dolor sit amet</td>
                 <td className="py-2 px-4">
-                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href='/app/add-content'>
+                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href='/main/add-content'>
                     Add Content
                   </Link>
 

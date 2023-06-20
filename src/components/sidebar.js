@@ -36,37 +36,37 @@ const SideBar = ({isActivePage, classn}) => {
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="DASHBOARD" ? 'text-white' : 'text-[#A1A6B1]'}`}>DASHBOARD</p>
       </a> */}
-      <Link href={"/app/coursesmanagement"} className={`flex text-white py-3 pl-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
+      <Link href={"/main/coursesmanagement"} className={`flex text-white py-3 pl-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
         {/* <a  > */}
           <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
           <p className={`pl-2 capitalize ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
         {/* </a> */}
       </Link>
-      <Link href={"/app/usermanagement"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <Link href={"/main/usermanagement"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
         {/* <a > */}
           <DashboardCustomizeIcon style={{margin:"0 10px"}} />
           <p className={`pl-2 capitalize  ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
         {/* </a> */}
       </Link>
-      <Link href={"/app/chat"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <Link href={"/main/chat"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
         {/* <a > */}
           <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
           <p className={`pl-2 capitalize  ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
         {/* </a> */}
       </Link>
-      <Link href={"/app/settings"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <Link href={"/main/settings"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
         {/* <a  > */}
           <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
           <p className={`pl-2 capitalize  ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
         {/* </a> */}
       </Link>
-      <Link href={"/app/analytics"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <Link href={"/main/analytics"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
       {/* <a  > */}
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
       {/* </a> */}
       </Link>
-      <Link href={"/app/reports"} className={`flex text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <Link href={"/main/reports"} className={`flex text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
       {/* <a  > */}
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>

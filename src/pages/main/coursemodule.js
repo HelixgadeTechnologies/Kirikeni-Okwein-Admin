@@ -184,7 +184,7 @@ function CourseModule() {
       </Header>
      <div className="flex space-x-4 my-5 items-center">
 
-     <Link href={"/app/courses-management"}>
+     <Link href={"/main/courses-management"}>
        <WestIcon/>
       </Link>
       <div className=" my-1">
@@ -223,7 +223,7 @@ function CourseModule() {
                 <td className="py-2 px-4">Greetings in Wakirike</td>
                 <td className="py-2 px-4">Lorem ipsum dolor sit amet</td>
                 <td className="py-2 px-4">
-                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/app/course-levels">
+                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/main/course-levels">
                     View
                   </Link>
                   <button className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2">

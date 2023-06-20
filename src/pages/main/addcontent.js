@@ -132,7 +132,7 @@ return(
         
   //     </Header>
   //     <div className="flex space-x-4 my-5 items-center">
-  //       <Link href={"/app/course-module"}>
+  //       <Link href={"/main/course-module"}>
   //         <WestIcon />
   //       </Link>
   //       <div className=" my-1 bg-white py-2 px-4">
