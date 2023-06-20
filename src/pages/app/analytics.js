@@ -2,7 +2,7 @@
 import AppBarChart from '@/components/BarChart';
 import DonutChart from '@/components/DonutChart';
 import Header from '@/components/Header'
-import Layout from '@/components/layout'
+import Layout from '@/components/Layout'
 import AppLineChart from '@/components/LineChart';
 import Link from 'next/link';
 import React, { useState } from 'react'

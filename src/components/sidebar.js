@@ -6,7 +6,7 @@ import Logo from "@/assets/logo.png"
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Image from "next/image";
 import Link from "next/link";
-const Sidebar = ({isActivePage, classn}) => {
+const SideBar = ({isActivePage, classn}) => {
     // const isActivePage = "true";
   return (
     <div className={`flex flex-col w-[290px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ${classn}`}>
@@ -81,4 +81,4 @@ const Sidebar = ({isActivePage, classn}) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;

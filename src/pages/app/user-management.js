@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 import Modal2 from "@/components/Modal2";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";

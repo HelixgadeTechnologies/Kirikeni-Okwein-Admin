@@ -1,5 +1,5 @@
 import CourseCard from "@/components/CourseCard";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Header from "@/components/Header";

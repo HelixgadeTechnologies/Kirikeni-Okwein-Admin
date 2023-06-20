@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import WestIcon from "@mui/icons-material/West";
