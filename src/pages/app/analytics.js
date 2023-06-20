@@ -1,5 +1,4 @@
-// import DonutChart from '@/components/DonutChart';
-import AppBarChart from '@/Components/BarChart';
+import AppBarChart from '@/Components/AppBarChart';
 import DonutChart from '@/Components/DonutChart';
 import Header from '@/Components/Header'
 import Layout from '@/Components/Layout'
