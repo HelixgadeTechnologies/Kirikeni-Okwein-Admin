@@ -1,14 +1,14 @@
-import CourseCard from "@/Components/CourseCard";
+// import CourseCard from "@/Components/CourseCard";
 import Layout from "@/Components/Layout";
 import React, { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import Header from "@/Components/Header";
-import AddIcon from "@mui/icons-material/Add";
+// import AddIcon from "@mui/icons-material/Add";
 import Modal2 from "@/Components/Modal2";
-import DragAndDropBox from "@/Components/DragAndDropBox";
+// import DragAndDropBox from "@/Components/DragAndDropBox";
 import WestIcon from '@mui/icons-material/West';
 import Link from "next/link";
-import { BuildTwoTone } from "@mui/icons-material";
+// import { BuildTwoTone } from "@mui/icons-material";
 
 function CourseManagement() {
   const [switchOpen, setSwitchOpen] = useState("one");
