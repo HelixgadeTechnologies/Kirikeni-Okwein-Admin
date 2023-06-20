@@ -2,7 +2,7 @@ import AppBarChart from '@/Components/AppBarChart';
 import DonutChart from '@/Components/DonutChart';
 import Header from '@/Components/Header'
 import Layout from '@/Components/Layout'
-import AppLineChart from '@/Components/LineChart';
+import AppLineChart from '@/Components/AppLineChart';
 import React, { useState } from 'react'
 
 function Analytics() {
