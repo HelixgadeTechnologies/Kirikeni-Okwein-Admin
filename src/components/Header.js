@@ -1,7 +1,7 @@
 import React from 'react'
 import AddIcon from '@mui/icons-material/Add';
 
-function Header({Title, BtnText, children}) {
+function Header({children}) {
   return (
     <div>
       {children}

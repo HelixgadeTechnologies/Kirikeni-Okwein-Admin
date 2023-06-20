@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import Layout from "@/components/Layout";
+import Header from "@/Components/Header";
+import Layout from "@/Components/Layout";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import WestIcon from "@mui/icons-material/West";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatUser from "@/assets/chat-user.png"
 import DoneAllIcon from '@mui/icons-material/DoneAll';
-import ChatBox from "@/components/ChatBox";
+import ChatBox from "@/Components/ChatBox";
 import Link from "next/link";
 
 function Chat() {
@@ -59,7 +59,7 @@ function Chat() {
   ]
   return (
     <Layout isActivePage="CHAT MESSAGING">
-      <Header Title={"User Management"} BtnText={"Add User"}>
+      <Header>
         <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
           <div>
             <p className="text-[20px] font-bold">Chat Messaging</p>
@@ -68,13 +68,13 @@ function Chat() {
               <p className={`pt-5 pb-3 ${switchOpen=="two"?"text-[#5141A4]  border-b border-[#5141A4]":"text-[#727A8B] "}`} onClick={()=>setSwitchOpen("two")}>Course Analytics</p>
             </div> */}
           </div>
-          <Link
+          <button
             className="bg-[#005259] text-white py-4 px-5 h-[56px]"
             // onClick={ModalControl}
           >
             <AddIcon />
             Create Ticket
-          </Link>
+          </button>
         </div>
         <div className="flex flex-grow mt-3 space-x-3">
           <div className="bg-white px-3 py-3 rounded w-full">

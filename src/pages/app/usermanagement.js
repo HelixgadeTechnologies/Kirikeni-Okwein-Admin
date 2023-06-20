@@ -1,9 +1,8 @@
-import Header from "@/components/Header";
-import Layout from "@/components/Layout";
-import Modal2 from "@/components/Modal2";
+import Header from "@/Components/Header";
+import Layout from "@/Components/Layout";
+import Modal2 from "@/Components/Modal2";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import Tabs from "@/components/Tabs";
 import Link from "next/link";
 
 function UserManagement() {
@@ -64,7 +63,7 @@ function UserManagement() {
       email: "john.doe@example.com",
       dateRegistered: "2022/01/01",
       status: true,
-      role:"Admin"
+      role: "Admin",
     },
     {
       id: 2,
@@ -72,9 +71,8 @@ function UserManagement() {
       email: "jane.smith@example.com",
       dateRegistered: "2022/02/01",
       status: false,
-      role:"Manager"
+      role: "Manager",
     },
-
   ];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -475,7 +473,6 @@ function UserManagement() {
               </button>
             </div>
           </form>
-
         </Modal2>
       ) : null}
 
@@ -574,74 +571,97 @@ function UserManagement() {
           </form>
           <div className="text-left flex flex-col text-[#434D64] space-y-3">
             <h1 className="text-bold">Role and Permissions</h1>
-          <table class="min-w-full bg-white my-3 text-left">
-            <thead>
-              <tr class="bg-[#F9FAFB]">
-                <th class="py-3 px-4">Check Box</th>
-                <th class="py-3 px-4">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can create and edit courses</td>
-              </tr>
-              <tr>
-               <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage users</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage sub admins</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage settings</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage reports</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="min-w-full bg-white my-3 text-left">
+              <thead>
+                <tr class="bg-[#F9FAFB]">
+                  <th class="py-3 px-4">Check Box</th>
+                  <th class="py-3 px-4">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can create and edit courses
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage users
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage sub admins
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage settings
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage reports
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          
-            <div className="flex justify-end w-full space-x-5">
-              <button
-                type="submit"
-                className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
-              >
-                Create Sub Admin
-              </button>
-            </div>
-
+          <div className="flex justify-end w-full space-x-5">
+            <button
+              type="submit"
+              className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
+            >
+              Create Sub Admin
+            </button>
+          </div>
         </Modal2>
       ) : null}
 
-       {/* modal 5 [view Admin ] */}
-       {isModal5Open ? (
+      {/* modal 5 [view Admin ] */}
+      {isModal5Open ? (
         <Modal2 isOpen={isModal5Open}>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold"> Admin Details</h2>
@@ -698,60 +718,63 @@ function UserManagement() {
           </div>
           <div className="text-left flex flex-col text-[#434D64] space-y-3">
             {/* <h1 className="text-bold">Role and Permissions</h1> */}
-          <table class="min-w-full bg-white my-3 text-left">
-            <thead>
-              <tr class="bg-[#F9FAFB]">
-                {/* <th class="py-3 px-4">Check Box</th> */}
-                <th class="py-3 px-4">Roles</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can create and edit courses</td>
-              </tr>
-              <tr>
-               
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage users</td>
-              </tr>
-              <tr>
-                
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage sub admins</td>
-              </tr>
-              <tr>
-               
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage settings</td>
-              </tr>
-              <tr>
-               
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage reports</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="min-w-full bg-white my-3 text-left">
+              <thead>
+                <tr class="bg-[#F9FAFB]">
+                  {/* <th class="py-3 px-4">Check Box</th> */}
+                  <th class="py-3 px-4">Roles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can create and edit courses
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage users
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage sub admins
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage settings
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage reports
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          
-            <div className="flex justify-end w-full space-x-5">
-              <button
-                type="submit"
-                className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
-              >
-                Delete Admin
-              </button>
-              <button
-                type="submit"
-                className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
-                onClick={ModalControl6}
-              >
-                Edit Admin
-              </button>
-            </div>
-
+          <div className="flex justify-end w-full space-x-5">
+            <button
+              type="submit"
+              className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
+            >
+              Delete Admin
+            </button>
+            <button
+              type="submit"
+              className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
+              onClick={ModalControl6}
+            >
+              Edit Admin
+            </button>
+          </div>
         </Modal2>
       ) : null}
 
-            {/* modal 6 [add user] */}
-            {isModal6Open ? (
+      {/* modal 6 [add user] */}
+      {isModal6Open ? (
         <Modal2 isOpen={isModal6Open}>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Edit new Sub Admin</h2>
@@ -845,289 +868,326 @@ function UserManagement() {
           </form>
           <div className="text-left flex flex-col text-[#434D64] space-y-3">
             <h1 className="text-bold">Role and Permissions</h1>
-          <table class="min-w-full bg-white my-3 text-left">
-            <thead>
-              <tr class="bg-[#F9FAFB]">
-                <th class="py-3 px-4">Check Box</th>
-                <th class="py-3 px-4">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can create and edit courses</td>
-              </tr>
-              <tr>
-               <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage users</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage sub admins</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage settings</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border-b-2 border-gray-200"> <label class="flex items-center">
-    <input type="checkbox" class="form-checkbox"/>
-    <span class="ml-2 text-blue-500 text-lg"></span>
-  </label></td>
-                <td class="py-3 px-4 border-b-2 border-gray-200">Can view and manage reports</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="min-w-full bg-white my-3 text-left">
+              <thead>
+                <tr class="bg-[#F9FAFB]">
+                  <th class="py-3 px-4">Check Box</th>
+                  <th class="py-3 px-4">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can create and edit courses
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage users
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage sub admins
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage settings
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    {" "}
+                    <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox" />
+                      <span class="ml-2 text-blue-500 text-lg"></span>
+                    </label>
+                  </td>
+                  <td class="py-3 px-4 border-b-2 border-gray-200">
+                    Can view and manage reports
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          
-            <div className="flex justify-end w-full space-x-5">
-              <button
-                type="submit"
-                className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
-              >
-                Save
-              </button>
-            </div>
-
+          <div className="flex justify-end w-full space-x-5">
+            <button
+              type="submit"
+              className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
+            >
+              Save
+            </button>
+          </div>
         </Modal2>
       ) : null}
 
       <Layout isActivePage="USER MANAGEMENT">
-        <Header Title={"User Management"} BtnText={"Add User"}>
+        <Header >
           <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
             <div>
-            <p className="text-[20px] font-bold">Dashboard</p>
-            <div className="flex text-[#727A8B]">
-              <p className={`pr-5 pt-5 pb-3 ${switchOpen=="one"?"text-[#5141A4] border-b border-[#5141A4]":"text-[#727A8B]"}`} onClick={()=>setSwitchOpen("one")}>User List</p>
-              <p className={`pt-5 pb-3 ${switchOpen=="two"?"text-[#5141A4]  border-b border-[#5141A4]":"text-[#727A8B] "}`} onClick={()=>setSwitchOpen("two")}>Sub Admin List</p>
+              <p className="text-[20px] font-bold">Dashboard</p>
+              <div className="flex text-[#727A8B]">
+                <p
+                  className={`pr-5 pt-5 pb-3 ${
+                    switchOpen == "one"
+                      ? "text-[#5141A4] border-b border-[#5141A4]"
+                      : "text-[#727A8B]"
+                  }`}
+                  onClick={() => setSwitchOpen("one")}
+                >
+                  User List
+                </p>
+                <p
+                  className={`pt-5 pb-3 ${
+                    switchOpen == "two"
+                      ? "text-[#5141A4]  border-b border-[#5141A4]"
+                      : "text-[#727A8B] "
+                  }`}
+                  onClick={() => setSwitchOpen("two")}
+                >
+                  Sub Admin List
+                </p>
+              </div>
             </div>
-
-            </div>
-            {
-              switchOpen !=="one"? <Link
-              className="bg-[#005259] text-white py-4 px-5 h-[56px]"
-              onClick={ModalControl}
-            >
-              <AddIcon /> Add Sub Admin
-            </Link>: <Link
-              className="bg-[#005259] text-white py-4 px-5 h-[56px]"
-              onClick={ModalControl4}
-            >
-              <AddIcon /> Add User
-            </Link>
-            }
-           
+            {switchOpen !== "one" ? (
+              <button
+                className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+                onClick={ModalControl}
+              >
+                <AddIcon /> Add Sub Admin
+              </button>
+            ) : (
+              <button
+                className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+                onClick={ModalControl4}
+              >
+                <AddIcon /> Add User
+              </button>
+            )}
           </div>
-          <div className='flex flex-grow mt-3 space-x-5'>
-        <div className='bg-white px-5 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Total Courses</p>
-            <b className='text-[28px]'>25</b>
-        </div>
-         <div className='bg-white px-5 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Average Learning time</p>
-            <b className='text-[28px]'>125 hours</b>
-        </div>
-        <div className='bg-white px-5 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Completion rate</p>
-            <b className='text-[28px]'>75%</b>
-        </div>
-        <div className='bg-white px-5 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Average Performance</p>
-            <b className='text-[28px]'>72%</b>
-        </div>
-        
-      </div>
+          <div className="flex flex-grow mt-3 space-x-5">
+            <div className="bg-white px-5 py-3 rounded w-full">
+              <p className="text-[#727A8B]">Total Courses</p>
+              <b className="text-[28px]">25</b>
+            </div>
+            <div className="bg-white px-5 py-3 rounded w-full">
+              <p className="text-[#727A8B]">Average Learning time</p>
+              <b className="text-[28px]">125 hours</b>
+            </div>
+            <div className="bg-white px-5 py-3 rounded w-full">
+              <p className="text-[#727A8B]">Completion rate</p>
+              <b className="text-[28px]">75%</b>
+            </div>
+            <div className="bg-white px-5 py-3 rounded w-full">
+              <p className="text-[#727A8B]">Average Performance</p>
+              <b className="text-[28px]">72%</b>
+            </div>
+          </div>
         </Header>
 
         <div className="bg-white mt-5 overflow-scroll overflow-x-auto w-fit max-h-[400px] scrollbar scrollbar-thumb-gray-500 scrollbar-track w-[70vw]">
-          {
-            switchOpen==="one"?
+          {switchOpen === "one" ? (
             <table className="min-w-fit divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  User
-                </th>
-                {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    User
+                  </th>
+                  {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             Username
           </th> */}
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Email
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Date Registered
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Leaderboard
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
-                        <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
-                          <span className="text-lg font-semibold">
-                            {user.username.charAt(0)}
-                          </span>
-                          <span className="text-lg font-semibold">
-                            {user.username.charAt(user.username.length - 1)}
-                          </span>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Email
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Date Registered
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Leaderboard
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Status
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {users.map((user) => (
+                  <tr key={user.id}>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
+                          <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
+                            <span className="text-lg font-semibold">
+                              {user.username.charAt(0)}
+                            </span>
+                            <span className="text-lg font-semibold">
+                              {user.username.charAt(user.username.length - 1)}
+                            </span>
+                          </div>
                         </div>
+                        <p className="pl-2">{user.username}</p>
                       </div>
-                      <p className="pl-2">{user.username}</p>
-                    </div>
-                  </td>
-                  {/* <td className="px-6 py-4 whitespace-nowrap">
+                    </td>
+                    {/* <td className="px-6 py-4 whitespace-nowrap">
               <div className="text-sm text-gray-900">{user.username}</div>
             </td> */}
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{user.email}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">
-                      {user.dateRegistered}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">
-                      {user.leaderboardNumber}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span
-                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded ${
-                        user.status
-                          ? "border py-1 px-1 border-green-100 text-green-800"
-                          : "border py-1 px-1 border-red-100 text-red-800"
-                      }`}
-                    >
-                      {user.status ? "Active" : "Inactive"}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button
-                      className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
-                      onClick={ModalControl2}
-                    >
-                      View User
-                    </button>
-                    <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          : switchOpen ==="two"? <table className="w-fit divide-y divide-gray-200 ">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                User
-              </th>
-              {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">{user.email}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">
+                        {user.dateRegistered}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">
+                        {user.leaderboardNumber}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span
+                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded ${
+                          user.status
+                            ? "border py-1 px-1 border-green-100 text-green-800"
+                            : "border py-1 px-1 border-red-100 text-red-800"
+                        }`}
+                      >
+                        {user.status ? "Active" : "Inactive"}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button
+                        className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
+                        onClick={ModalControl2}
+                      >
+                        View User
+                      </button>
+                      <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : switchOpen === "two" ? (
+            <table className="w-fit divide-y divide-gray-200 ">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    User
+                  </th>
+                  {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Username
         </th> */}
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Email
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Date Registered
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Role
-              </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Email
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Date Registered
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Role
+                  </th>
 
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Action
-              </th>
-              <th >
-                <p className="invisible">.............</p></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {admins.map((user) => (
-              <tr key={user.id}>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
-                      <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
-                        <span className="text-lg font-semibold">
-                          {user.username.charAt(0)}
-                        </span>
-                        <span className="text-lg font-semibold">
-                          {user.username.charAt(user.username.length - 1)}
-                        </span>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Action
+                  </th>
+                  <th>
+                    <p className="invisible">.............</p>
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {admins.map((user) => (
+                  <tr key={user.id}>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
+                          <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
+                            <span className="text-lg font-semibold">
+                              {user.username.charAt(0)}
+                            </span>
+                            <span className="text-lg font-semibold">
+                              {user.username.charAt(user.username.length - 1)}
+                            </span>
+                          </div>
+                        </div>
+                        <p className="pl-2">{user.username}</p>
                       </div>
-                    </div>
-                    <p className="pl-2">{user.username}</p>
-                  </div>
-                </td>
-                {/* <td className="px-6 py-4 whitespace-nowrap">
+                    </td>
+                    {/* <td className="px-6 py-4 whitespace-nowrap">
             <div className="text-sm text-gray-900">{user.username}</div>
           </td> */}
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-900">{user.email}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-900">
-                    {user.dateRegistered}
-                  </div>
-                </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">{user.email}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">
+                        {user.dateRegistered}
+                      </div>
+                    </td>
 
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-900">
-                    {user.role}
-                  </div>
-                </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">{user.role}</div>
+                    </td>
 
-
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                <button
-                      className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
-                      onClick={ModalControl5}
-                    >
-                      View Admin
-                    </button>
-                    <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
-                      Delete
-                    </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>:null
-          }
-         
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button
+                        className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
+                        onClick={ModalControl5}
+                      >
+                        View Admin
+                      </button>
+                      <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : null}
         </div>
       </Layout>
     </>

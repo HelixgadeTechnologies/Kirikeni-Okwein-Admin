@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import patterns from "@/assets/patterns.png"
 import Logo from "@/assets/logo.png"
-import Modal from '@/components/Modal'
+import Modal from '@/Components/Modal'
 import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 

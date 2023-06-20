@@ -1,9 +1,9 @@
-import Header from '@/components/Header'
-import Layout from '@/components/Layout'
+import Header from '@/Components/Header'
+import Layout from '@/Components/Layout'
 import AddIcon from "@mui/icons-material/Add";
 import React, { useState } from 'react'
 
-function support() {
+function Support() {
     const [switchOpen, setSwitchOpen] = useState("one");
     const users = [
         {
@@ -40,7 +40,7 @@ function support() {
       ];
   return (
     <Layout>
-      <Header Title={"User Management"} BtnText={"Add User"}>
+      <Header>
           <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
             <div>
             <p className="text-[20px] font-bold">Support</p>
@@ -258,4 +258,4 @@ function support() {
   )
 }
 
-export default support
+export default Support

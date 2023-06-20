@@ -1,15 +1,15 @@
-import CourseCard from "@/components/CourseCard";
-import Layout from "@/components/Layout";
+import CourseCard from "@/Components/CourseCard";
+import Layout from "@/Components/Layout";
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import Header from "@/components/Header";
+import Header from "@/Components/Header";
 import AddIcon from "@mui/icons-material/Add";
-import Modal2 from "@/components/Modal2";
-import DragAndDropBox from "@/components/DragAndDropBox";
+import Modal2 from "@/Components/Modal2";
+import DragAndDropBox from "@/Components/DragAndDropBox";
 import WestIcon from '@mui/icons-material/West';
 import Link from "next/link";
 
-function CourseManagement() {
+function CourseLevels() {
   const [switchOpen, setSwitchOpen] = useState("one");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const ModalControl = () => {
@@ -119,7 +119,7 @@ function CourseManagement() {
     ) : null
   }
     <Layout isActivePage="COURSES MANAGEMENT">
-      <Header Title={"User Management"} BtnText={"Add User"}>
+      <Header>
         <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
           <div>
             <p className="text-[20px] font-bold">Course Management</p>
@@ -152,7 +152,7 @@ function CourseManagement() {
       </div> */}
       </Header>
      <div className="flex space-x-4 my-5 items-center">
-      <Link href="/app/course-module">
+      <Link href={"/app/course-module"}>
        <WestIcon/>
 
       </Link>
@@ -216,4 +216,4 @@ function CourseManagement() {
   );
 }
 
-export default CourseManagement;
+export default CourseLevels;

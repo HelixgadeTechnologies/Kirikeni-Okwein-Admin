@@ -1,9 +1,9 @@
 // import DonutChart from '@/components/DonutChart';
-import AppBarChart from '@/components/BarChart';
-import DonutChart from '@/components/DonutChart';
-import Header from '@/components/Header'
-import Layout from '@/components/Layout'
-import AppLineChart from '@/components/LineChart';
+import AppBarChart from '@/Components/BarChart';
+import DonutChart from '@/Components/DonutChart';
+import Header from '@/Components/Header'
+import Layout from '@/Components/Layout'
+import AppLineChart from '@/Components/LineChart';
 import Link from 'next/link';
 import React, { useState } from 'react'
 
@@ -12,7 +12,7 @@ function Analytics() {
 
   return (
     <Layout isActivePage="ANALYTICS">
-       <Header Title={"User Management"} BtnText={"Add User"}>
+       <Header>
           <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
             <div>
             <p className="text-[20px] font-bold">Dashboard</p>
@@ -23,17 +23,17 @@ function Analytics() {
 
             </div>
             {
-              switchOpen=="one"? <Link
+              switchOpen=="one"? <button
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl}
             >
                View Users
-            </Link>: <Link
+            </button>: <button
               className="bg-[#005259] text-white py-4 px-5 h-[56px]"
               // onClick={ModalControl4}
             >
               Add User
-            </Link>
+            </button>
             }
            
           </div>

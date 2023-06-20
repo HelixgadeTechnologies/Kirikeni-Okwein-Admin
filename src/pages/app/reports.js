@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
-import Layout from "@/components/Layout";
+import Header from "@/Components/Header";
+import Layout from "@/Components/Layout";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import BasicTable from "@/components/Table";
-import Modal2 from "@/components/Modal2";
+import BasicTable from "@/Components/Table";
+import Modal2 from "@/Components/Modal2";
 
 function Reports() {
   const [switchOpen, setSwitchOpen] = useState("closed");
@@ -401,7 +401,7 @@ function Reports() {
         </Modal2>
       ) : null}
       <Layout isActivePage="REPORTS">
-        <Header Title={"User Management"} BtnText={"Add User"}>
+        <Header>
           <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
             <div>
               <p className="text-[20px] font-bold">Reports</p>

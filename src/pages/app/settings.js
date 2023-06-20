@@ -1,10 +1,10 @@
-import Header from '@/components/Header'
-import Layout from '@/components/Layout'
+import Header from '@/Components/Header'
+import Layout from '@/Components/Layout'
 import React, { useState } from 'react'
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import profile from "@/assets/profile.png"
 import Image from 'next/image'
-function settings() {
+function Settings() {
   const [switchOpen, setSwitchOpen] = useState("one");
 
   const [isChecked, setIsChecked] = useState(false);
@@ -30,7 +30,7 @@ function settings() {
 
   return (
     <Layout isActivePage="ACCOUNT SETTINGS">
-          <Header Title={"User Management"} BtnText={"Add User"}>
+          <Header>
           <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
             <div>
             <p className="text-[20px] font-bold">Setting</p>
@@ -367,4 +367,4 @@ function settings() {
   )
 }
 
-export default settings
+export default Settings
