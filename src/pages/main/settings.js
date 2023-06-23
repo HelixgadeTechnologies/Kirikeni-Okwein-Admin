@@ -31,7 +31,7 @@ function Settings() {
   return (
     <Layout isActivePage="ACCOUNT SETTINGS">
           <Header>
-          <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
+          <div className="bg-white flex justify-between w-full mt-3 h-fit items-center px-10 pt-3 rounded">
             <div>
             <p className="text-[20px] font-bold">Setting</p>
             <div className="flex text-[#727A8B]">
@@ -136,7 +136,7 @@ function Settings() {
       <form onSubmit={handleSubmit}>
         <div className='flex space-x-4'>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+            <label className="block text-[#727A8B] text-sm font-bold mb-2" htmlFor="name">
               Name
             </label>
             <input
@@ -150,7 +150,7 @@ function Settings() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+            <label className="block text-[#727A8B] text-sm font-bold mb-2" htmlFor="phone">
               Phone
             </label>
             <input
@@ -165,7 +165,7 @@ function Settings() {
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          <label className="block text-[#727A8B] text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
           <input
@@ -179,7 +179,7 @@ function Settings() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+          <label className="block text-[#727A8B] text-sm font-bold mb-2" htmlFor="password">
             Password
           </label>
           <input
@@ -200,10 +200,31 @@ function Settings() {
         </div>
         :switchOpen=="two"?
         <div className='flex justify-center'>
-          <div className='bg-white w-[70%] h-[60vh] my-10' >
+          <div className='bg-white w-[70%] h-[60vh] my-10 relative' >
               <div className='flex justify-between border-b p-5'>
                 <h3>Notifications</h3>
+                <div className='flex space-x-3'>
+                <div className="relative inline-block w-12 h-6 rounded-full bg-gray-300">
+                      <input
+                        type="checkbox"
+                        className="absolute top-0 left-0 w-6 h-6 rounded-full appearance-none cursor-pointer transition-transform duration-300 ease-in-out focus:outline-none"
+                        style={{
+                          transform: isChecked ? "translateX(100%)" : "translateX(0%)",
+                        }}
+                        defaultChecked={isChecked}
+                        onChange={handleToggle}
+                        onClick={handleToggle}
+                      />
+                      <div
+                        className={`absolute top-0 left-0 w-6 h-6 rounded-full bg-white shadow transform transition-transform duration-300 ease-in-out ${
+                          isChecked ? "translate-x-6" : ""
+                        }`}
+                        style={{ backgroundColor: "#7F56D9" }}
+                      ></div>
+                    </div>
                 <p>Turn on Notifications</p>
+
+                </div>
               </div>
           <div className='p-5 flex flex-col space-y-3'>
             <span className='font-bold'>Select Prefered medium</span>
@@ -215,7 +236,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">SMS</span>
+          <span className="text-[#727A8B]">SMS</span>
         </label>
       </div>
       <div>
@@ -226,7 +247,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">EMAIL</span>
+          <span className="text-[#727A8B]">EMAIL</span>
         </label>
       </div>
       <div>
@@ -237,7 +258,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">In-APP</span>
+          <span className="text-[#727A8B]">In-APP</span>
         </label>
       </div>
       <div>
@@ -248,8 +269,23 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">BROWSER</span>
+          <span className="text-[#727A8B]">BROWSER</span>
         </label>
+      </div>
+      <div className="flex justify-end items-end mr-4 w-full space-x-5 w-[40%] absolute bottom-5 right-1">
+      <button
+        type="submit"
+        className="bg-white text-[#005259] border border-[#005259] rounded mt-4 h-[56px] w-[100px]  px-4"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        className="bg-[#005259] text-white rounded mt-4  p-2 h-[56px] w-[180px]"
+        // onClick={ModalControl6}
+      >
+        Save changes
+      </button>
       </div>
           </div>
           </div>
@@ -258,11 +294,11 @@ function Settings() {
         <div className='flex justify-center'>
           <div className='bg-white w-[70%] h-[60vh] my-10' >
               <div className='flex justify-between border-b p-5'>
-                <h3>Payment</h3>
+                <h3 className='text-[24px] font-bold '>Payments</h3>
                 {/* <p>Turn  on Notifications</p> */}
               </div>
           <div className='p-5 flex flex-col space-y-3'>
-            <span className='font-bold'>Payment Gateway</span>
+            <span className='font-bold text-[14px]'>Payment Gateway</span>
               <div>
         <label className="flex items-center space-x-2">
           <input
@@ -271,7 +307,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">STRIPE</span>
+          <span className="text-[#727A8B]">STRIPE</span>
         </label>
       </div>
       <div>
@@ -282,7 +318,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">PAYPAL</span>
+          <span className="text-[#727A8B]">PAYPAL</span>
         </label>
       </div>
       <div>
@@ -293,13 +329,13 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">OTHERS</span>
+          <span className="text-[#727A8B]">OTHERS</span>
         </label>
       </div>
 
           </div>
           <div className='p-5 flex flex-col space-y-3'>
-            <span className='font-bold'>Payment Currency</span>
+            <span className='font-bold text-[14px]'>Payment Currency</span>
               <div>
         <label className="flex items-center space-x-2">
           <input
@@ -308,7 +344,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">USD</span>
+          <span className="text-[#727A8B]">USD</span>
         </label>
       </div>
       <div>
@@ -319,7 +355,7 @@ function Settings() {
             onChange={handleToggle}
             className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           />
-          <span className="text-gray-700">GPB</span>
+          <span className="text-[#727A8B]">GPB</span>
         </label>
       </div>
       <div>
@@ -328,18 +364,33 @@ function Settings() {
             type="checkbox"
             checked={isChecked}
             onChange={handleToggle}
-            className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
+            className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out border-white"
           />
-          <span className="text-gray-700">NGN</span>
+          <span className="text-[#727A8B]">NGN</span>
         </label>
       </div>
+      <div className="flex justify-end mr-4 w-full space-x-5 w-[40%]">
+      <button
+        type="submit"
+        className="bg-white text-[#005259] border border-[#005259] rounded mt-4 h-[56px] w-[100px]  px-4"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        className="bg-[#005259] text-white rounded mt-4  p-2 h-[56px] w-[180px]"
+        // onClick={ModalControl6}
+      >
+        Save changes
+      </button>
+    </div>
 
           </div>
           </div>
         </div>
         :switchOpen=="four"?
         <div className='flex justify-center'>
-          <div className='bg-white w-[70%] h-[60vh] my-10' >
+          <div className='bg-white w-[70%] h-[60vh] my-10 relative' >
               <div className='flex justify-between border-b p-5'>
                 <h3>Language</h3>
                 {/* <p>Turn on Notifications</p> */}
@@ -352,13 +403,29 @@ function Settings() {
             type="checkbox"
             checked={isChecked}
             onChange={handleToggle}
-            className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
+            className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out border border-gray-200"
           />
-          <span className="text-gray-700">ENGLISH</span>
+          <span className="text-[#727A8B]">ENGLISH</span>
         </label>
       </div>
 
+
           </div>
+          <div className="flex justify-end items-end mr-4 w-full space-x-5 w-[40%] absolute bottom-10 right-1">
+      <button
+        type="submit"
+        className="bg-white text-[#005259] border border-[#005259] rounded mt-4 h-[56px] w-[100px]  px-4"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        className="bg-[#005259] text-white rounded mt-4  p-2 h-[56px] w-[180px]"
+        // onClick={ModalControl6}
+      >
+        Save changes
+      </button>
+      </div>
           </div>
         </div>
         :""

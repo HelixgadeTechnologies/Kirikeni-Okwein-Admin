@@ -223,7 +223,7 @@ function CourseModule() {
                 <td className="py-2 px-4">Greetings in Wakirike</td>
                 <td className="py-2 px-4">Lorem ipsum dolor sit amet</td>
                 <td className="py-2 px-4">
-                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/main/course-levels">
+                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/main/courselevels">
                     View
                   </Link>
                   <button className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2">

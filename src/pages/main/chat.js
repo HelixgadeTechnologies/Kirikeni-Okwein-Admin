@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Layout from "@/components/Layout.js";
 import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import WestIcon from "@mui/icons-material/West";
@@ -10,6 +9,7 @@ import ChatUser from "@/assets/chat-user.png"
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import ChatBox from "@/components/ChatBox";
 import Link from "next/link";
+import Layout from "@/components/Layout";
 
 function Chat() {
   const [messaging, setMessaging] = useState(true)
@@ -100,7 +100,7 @@ function Chat() {
         </div>
       </Header>
       <div className="flex space-x-4 my-5 items-center">
-        <Link href="/main/course-module">
+        <Link href="/main/coursemodule">
           <WestIcon />
         </Link>
         <div className=" my-1 bg-white py-2 px-4">
