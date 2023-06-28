@@ -6,22 +6,28 @@ import Logo from "@/assets/logo.png"
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Image from "next/image";
 import Link from "next/link";
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import ForumIcon from '@mui/icons-material/Forum';
+import TuneIcon from '@mui/icons-material/Tune';
+import InsightsIcon from '@mui/icons-material/Insights';
+import SummarizeIcon from '@mui/icons-material/Summarize';
 const SideBar = ({isActivePage, classn}) => {
     // const isActivePage = "true";
   return (
-    <div className={`flex flex-col w-[290px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ${classn}`}>
+    <div className={`flex flex-col w-[270px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ${classn}`}>
       <div className="flex justify-between px-3">
         <div className="h-7 w-7 bg-white rounded-full">
           <Image src={Logo}  alt="" className="w-4 h-6 ml-2"/>
         </div>
-        <div className="h-7 w-7 bg-white rounded-full">
-          <KeyboardDoubleArrowLeftIcon/>
+        <div className="h-7 w-7 bg-white rounded-full pt-[1px]">
+          <KeyboardDoubleArrowLeftIcon style={{fontSize:"25px"}}/>
         </div>
       </div>
-      <div className="relative my-5 px-3">
+      <div className="relative my-5 px-5 ">
         <input
           type="text"
-          className="py-2 px-4 py-3 mx-[2px] pl-16 rounded-lg border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-fit  bg-[#F3F4F5] bg-opacity-20 text-white"
+          className="py-2 px-4 py-3 mx-[2px] pl-10 rounded-md border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[98%]  bg-[#F3F4F5] bg-opacity-20 text-white "
           placeholder="Search"
         />
         <div className="absolute inset-y-0 left-3 pr-3 flex items-center pointer-events-none">
@@ -31,46 +37,51 @@ const SideBar = ({isActivePage, classn}) => {
           />
         </div>
       </div>
-    <div className="text-[]">
+    <div className="text-[] text-right">
       {/* <a className={`flex text-white py-3 px-3 text-[#A1A6B1] border-b border-[#A1A6B1]  ${isActivePage =="DASHBOARD" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} href="/app/dashboard">
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="DASHBOARD" ? 'text-white' : 'text-[#A1A6B1]'}`}>DASHBOARD</p>
       </a> */}
-      <Link href={"/main/coursesmanagement"} className={`flex text-white py-3 pl-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
-        {/* <a  > */}
-          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-          <p className={`pl-2 capitalize ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
+      <Link href={"/main/coursesmanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
+        <div className={`px-3 ${isActivePage =="COURSES MANAGEMENT" ?'text-white':"text-[#A1A6B1]"}`}>
+          <ManageSearchIcon />
+        </div>
+          <p className={` capitalize text-[13px] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
+       
+      </Link>
+      <Link href={"/main/usermanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+        <div className={`px-3 ${isActivePage =="USER MANAGEMENT" ?'text-white':"text-[#A1A6B1]"}`}>
+          <ManageAccountsIcon  />
+          </div>
+          <p className={` capitalize text-[13px] ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
         {/* </a> */}
       </Link>
-      <Link href={"/main/usermanagement"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <Link href={"/main/chat"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
         {/* <a > */}
-          <DashboardCustomizeIcon style={{margin:"0 10px"}} />
-          <p className={`pl-2 capitalize  ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
-        {/* </a> */}
+        <div className={`px-3 ${isActivePage =="CHAT MESSAGING" ?'text-white':"text-[#A1A6B1]"}`}>
+          <ForumIcon  />
+        </div>
+          <p className={` capitalize text-[13px] ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
+      
       </Link>
-      <Link href={"/main/chat"} className={`flex text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
-        {/* <a > */}
-          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-          <p className={`pl-2 capitalize  ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
-        {/* </a> */}
+      <Link href={"/main/settings"} className={`flex items-center justify-start text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+        <div className={`px-3 ${isActivePage =="ACCOUNT SETTINGS" ?'text-white':"text-[#A1A6B1]"}`}>
+          <TuneIcon />
+        </div>
+          <p className={`capitalize text-[13px] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
+        
       </Link>
-      <Link href={"/main/settings"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
-        {/* <a  > */}
-          <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-          <p className={`pl-2 capitalize  ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
-        {/* </a> */}
+      <Link href={"/main/analytics"} className={`flex items-center justify-start text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <div className={`px-3 ${isActivePage =="ANALYTICS" ?'text-white':"text-[#A1A6B1]"}`}>
+        <InsightsIcon />
+      </div>
+        <p className={`capitalize text-[13px] ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
       </Link>
-      <Link href={"/main/analytics"} className={`flex text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
-      {/* <a  > */}
-        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-        <p className={`pl-2 capitalize  ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
-      {/* </a> */}
-      </Link>
-      <Link href={"/main/reports"} className={`flex text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
-      {/* <a  > */}
-        <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
-        <p className={`pl-2 capitalize  ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>
-      {/* </a> */}
+      <Link href={"/main/reports"} className={`flex items-center justify-start text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <div className={`px-3 ${isActivePage =="REPORTS" ?'text-white':"text-[#A1A6B1]"}`}>
+        <SummarizeIcon />
+      </div>
+        <p className={` capitalize text-[13px] ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>
       </Link>
 
     </div>

@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const handleSubmit = (e) =>{
     e.preventDefault()
-    location.replace("/main/dashboard")
+    location.replace("/main/coursemanagement")
   }
   return (
     <>

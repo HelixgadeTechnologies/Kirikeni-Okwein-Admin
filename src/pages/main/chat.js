@@ -76,26 +76,26 @@ function Chat() {
             Create Ticket
           </button>
         </div>
-        <div className="flex flex-grow mt-3 space-x-3">
-          <div className="bg-white px-3 py-3 rounded w-full">
-            <p className="text-[#727A8B]">Number Of login</p>
-            <b className="text-[25px]">25</b>
+        <div className="flex flex-grow mt-3 space-x-2 ">
+          <div className="bg-white px-2 py-3 rounded w-full">
+            <p className="text-[#727A8B] text-[14px]">Number Of login</p>
+            <b className="text-[23px]">25</b>
           </div>
-          <div className="bg-white px-3 py-3 rounded w-full">
-            <p className="text-[#727A8B]">Average time per session</p>
-            <b className="text-[25px]">125 hours</b>
+          <div className="bg-white px-2 py-3 rounded w-full">
+            <p className="text-[#727A8B] text-[14px]">Average time per session</p>
+            <b className="text-[23px]">125 hours</b>
           </div>
-          <div className="bg-white px-3 py-3 rounded w-full">
-            <p className="text-[#727A8B]">Completion rate</p>
-            <b className="text-[25px]">75%</b>
+          <div className="bg-white px-2 py-3 rounded w-full">
+            <p className="text-[#727A8B] text-[14px]">Completion rate</p>
+            <b className="text-[23px]">75%</b>
           </div>
-          <div className="bg-white px-3 py-3 rounded w-full">
-            <p className="text-[#727A8B]">Average Course Rating</p>
-            <b className="text-[25px]">72%</b>
+          <div className="bg-white px-2 py-3 rounded w-full">
+            <p className="text-[#727A8B] text-[14px]">Average Course Rating</p>
+            <b className="text-[23px]">72%</b>
           </div>
-          <div className="bg-white px-3 py-3 rounded w-full">
-            <p className="text-[#727A8B]">Average Performance</p>
-            <b className="text-[25px]">72%</b>
+          <div className="bg-white px-2 py-3 rounded w-full">
+            <p className="text-[#727A8B] text-[14px]">Average Performance</p>
+            <b className="text-[23px]">72%</b>
           </div>
         </div>
       </Header>

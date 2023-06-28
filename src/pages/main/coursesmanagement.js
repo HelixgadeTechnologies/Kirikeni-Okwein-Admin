@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import AddIcon from "@mui/icons-material/Add";
 import Modal2 from "@/components/Modal2";
 import DragAndDropBox from "@/components/DragAndDropBox";
+import Link from "next/link";
+import WestIcon from "@mui/icons-material/West";
 
 function CourseManagement() {
   const [switchOpen, setSwitchOpen] = useState("one");
@@ -212,10 +214,21 @@ function CourseManagement() {
         
       </div> */}
       </Header>
-      <p className="text-[16px] pt-5">Courses</p>
+      <div className="flex space-x-4 my-5 items-center">
+          <Link href={"/main/coursemodule"}>
+            <WestIcon style={{color:"#5141A4"}} />
+          </Link>
+          <div className=" my-1 bg-white py-2 px-4">
+            <p>
+              Courses Management{" "}
+              <span className="text-[#5141A4]">/ Courses</span>
+            </p>
+          </div>
+        </div>
+      <p className="text-[16px] ">Courses</p>
       <div className="bg-white mt-5 overflow-scroll max-h-[500px] scrollbar scrollbar-thumb-gray-500 scrollbar-track rounded">
         <div className="p-5">
-          <div className=" my-1 relative">
+          <div className=" my-1 ">
             <input
               type="text"
               className="py-2 px-8 py-2 mx-[2px] pl-16 rounded-lg border border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[500px]  bg-[#F3F4F5] bg-opacity-20 text-black"

@@ -960,9 +960,9 @@ function UserManagement() {
 
       <Layout isActivePage="USER MANAGEMENT">
         <Header >
-          <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
+          <div className="bg-white flex justify-between w-full mt-3 h-fit items-center px-10  rounded">
             <div>
-              <p className="text-[20px] font-bold">Dashboard</p>
+              <p className="text-[20px] font-bold pt-5">User Management</p>
               <div className="flex text-[#727A8B]">
                 <p
                   className={`pr-5 pt-5 pb-3 ${
@@ -988,14 +988,14 @@ function UserManagement() {
             </div>
             {switchOpen !== "one" ? (
               <button
-                className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+                className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded"
                 onClick={ModalControl}
               >
                 <AddIcon /> Add Sub Admin
               </button>
             ) : (
               <button
-                className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+                className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded"
                 onClick={ModalControl4}
               >
                 <AddIcon /> Add User
@@ -1004,20 +1004,20 @@ function UserManagement() {
           </div>
           <div className="flex flex-grow mt-3 space-x-5">
             <div className="bg-white px-5 py-3 rounded w-full">
-              <p className="text-[#727A8B]">Total Courses</p>
-              <b className="text-[28px]">25</b>
+              <p className="text-[#727A8B] text-[16px]">Total Courses</p>
+              <b className="text-[23px]">25</b>
             </div>
             <div className="bg-white px-5 py-3 rounded w-full">
-              <p className="text-[#727A8B]">Average Learning time</p>
-              <b className="text-[28px]">125 hours</b>
+              <p className="text-[#727A8B] text-[16px]">Average Learning time</p>
+              <b className="text-[23px]">125 hours</b>
             </div>
             <div className="bg-white px-5 py-3 rounded w-full">
-              <p className="text-[#727A8B]">Completion rate</p>
-              <b className="text-[28px]">75%</b>
+              <p className="text-[#727A8B] text-[16px]">Completion rate</p>
+              <b className="text-[23px]">75%</b>
             </div>
             <div className="bg-white px-5 py-3 rounded w-full">
-              <p className="text-[#727A8B]">Average Performance</p>
-              <b className="text-[28px]">72%</b>
+              <p className="text-[#727A8B] text-[16px]">Average Performance</p>
+              <b className="text-[23px]">72%</b>
             </div>
           </div>
         </Header>
@@ -1027,25 +1027,25 @@ function UserManagement() {
             <table className="min-w-fit divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     User
                   </th>
                   {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             Username
           </th> */}
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Email
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Date Registered
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Leaderboard
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Action
                   </th>
                 </tr>
@@ -1056,7 +1056,7 @@ function UserManagement() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
-                          <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
+                          <div className="rounded-full bg-[#4A64BD] h-10 w-10 text-white flex items-center justify-center">
                             <span className="text-lg font-semibold">
                               {user.username.charAt(0)}
                             </span>
@@ -1071,38 +1071,38 @@ function UserManagement() {
                     {/* <td className="px-6 py-4 whitespace-nowrap">
               <div className="text-sm text-gray-900">{user.username}</div>
             </td> */}
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-4 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">{user.email}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-4 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">
                         {user.dateRegistered}
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-4 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">
                         {user.leaderboardNumber}
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-4 py-4 whitespace-nowrap">
                       <span
                         className={`px-2 inline-flex text-xs leading-5 font-semibold rounded ${
                           user.status
-                            ? "border py-1 px-1 border-green-100 text-green-800"
-                            : "border py-1 px-1 border-red-100 text-red-800"
+                            ? "border py-1 px-4 border-[#03D858] text-[#03D858]"
+                            : "border py-1 px-3 border-[#F04C4C] text-[#F04C4C]"
                         }`}
                       >
                         {user.status ? "Active" : "Inactive"}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <td className="px-4 py-4 whitespace-nowrap text-sm font-medium">
                       <button
-                        className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
+                        className="border py-2 px-3 border-gray-300 rounded text-[#005259]"
                         onClick={ModalControl2}
                       >
                         View User
                       </button>
-                      <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
+                      <button className="border py-2 px-3 border-gray-300 rounded ml-2 text-[#FE5F55]">
                         Delete
                       </button>
                     </td>
@@ -1114,7 +1114,7 @@ function UserManagement() {
             <table className="w-fit divide-y divide-gray-200 ">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     User
                   </th>
                   {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -1123,14 +1123,14 @@ function UserManagement() {
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Email
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Date Registered
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Role
                   </th>
 
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Action
                   </th>
                   <th>
@@ -1142,10 +1142,10 @@ function UserManagement() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {admins.map((user) => (
                   <tr key={user.id}>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-5 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10 rounded-full flex">
-                          <div className="rounded-full bg-blue-500 h-10 w-10 text-white flex items-center justify-center">
+                          <div className="rounded-full bg-[#4A64BD] h-10 w-10 text-white flex items-center justify-center">
                             <span className="text-lg font-semibold">
                               {user.username.charAt(0)}
                             </span>
@@ -1163,24 +1163,24 @@ function UserManagement() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">{user.email}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-5 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">
                         {user.dateRegistered}
                       </div>
                     </td>
 
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-5 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900">{user.role}</div>
                     </td>
 
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <td className="px-7 py-4 whitespace-nowrap text-sm font-medium">
                       <button
-                        className="border py-1 px-1 border-gray-300 rounded text-blue-600 hover:text-blue-900"
+                        className="border py-2 px-3 border-gray-300 rounded text-[#005259] hover:text-[#005259]"
                         onClick={ModalControl5}
                       >
                         View Admin
                       </button>
-                      <button className="border py-1 px-1 border-gray-300 rounded ml-2 text-red-600 hover:text-red-900">
+                      <button className="border py-2 px-3 border-gray-300 rounded ml-2 text-[#FE5F55] hover:text-[#FE5F55]">
                         Delete
                       </button>
                     </td>

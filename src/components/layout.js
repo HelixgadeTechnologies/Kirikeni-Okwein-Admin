@@ -10,7 +10,7 @@ const Layout = ({ children, isActivePage }) => {
   <div className="fixed h-screen w-56 bg-white border-r border-gray-200 top-2">
     <SideBar isActivePage={isActivePage} classn='' />
   </div>
-  <div className="flex-grow overflow-y-auto px-10 py-3 pl-[320px]">
+  <div className="flex-grow overflow-y-auto overflow-x-hidden px-5 py-3 pl-[300px]">
     <TopBar/>
     {/* Main content */}
     {children}

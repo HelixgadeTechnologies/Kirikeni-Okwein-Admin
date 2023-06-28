@@ -14,9 +14,9 @@ function Analytics() {
   return (
     <Layout isActivePage="ANALYTICS">
        <Header>
-          <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
+          <div className="bg-white flex justify-between w-full mt-3 h-fit items-center px-10 rounded">
             <div>
-            <p className="text-[20px] font-bold">Dashboard</p>
+            <p className="text-[20px] font-bold pt-5">Analytics</p>
             <div className="flex text-[#727A8B]">
               <p className={`pr-5 pt-5 pb-3 ${switchOpen=="one"?"text-[#5141A4] border-b border-[#5141A4]":"text-[#727A8B]"}`} onClick={()=>setSwitchOpen("one")}>User Analytics</p>
               <p className={`pt-5 pb-3 ${switchOpen=="two"?"text-[#5141A4]  border-b border-[#5141A4]":"text-[#727A8B] "}`} onClick={()=>setSwitchOpen("two")}>Course Analytics</p>
@@ -38,26 +38,26 @@ function Analytics() {
             }
            
           </div>
-          <div className='flex flex-grow mt-3 space-x-3'>
-        <div className='bg-white px-3 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Number Of login</p>
-            <b className='text-[25px]'>25</b>
+          <div className='flex flex-grow mt-3 space-x-2'>
+        <div className='bg-white px-2 py-3 rounded w-full'>
+            <p className='text-[#727A8B] text-[16px]'>Number Of login</p>
+            <b className='text-[23px]'>25</b>
         </div>
-         <div className='bg-white px-3 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Average time per session</p>
-            <b className='text-[25px]'>125 hours</b>
+         <div className='bg-white px-2 py-3 rounded w-full'>
+            <p className='text-[#727A8B] text-[14px]'>Average time per session</p>
+            <b className='text-[23px]'>125 hours</b>
         </div>
-        <div className='bg-white px-3 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Completion rate</p>
-            <b className='text-[25px]'>75%</b>
+        <div className='bg-white px-2 py-3 rounded w-full'>
+            <p className='text-[#727A8B] text-[14px]'>Completion rate</p>
+            <b className='text-[23px]'>75%</b>
         </div>
-        <div className='bg-white px-3 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Average Course Rating</p>
-            <b className='text-[25px]'>72%</b>
+        <div className='bg-white px-2 py-3 rounded w-full'>
+            <p className='text-[#727A8B] text-[14px]'>Average Course Rating</p>
+            <b className='text-[23px]'>72%</b>
         </div>
-        <div className='bg-white px-3 py-3 rounded w-full'>
-            <p className='text-[#727A8B]'>Average Performance</p>
-            <b className='text-[25px]'>72%</b>
+        <div className='bg-white px-2 py-3 rounded w-full'>
+            <p className='text-[#727A8B] text-[14px]'>Average Performance</p>
+            <b className='text-[23px]'>72%</b>
         </div>
         
       </div>
@@ -66,30 +66,30 @@ function Analytics() {
           switchOpen=="one"?
           <div className=''>
           <div className=' w-full h-[316px] mt-5 flex '>
-            <div className='bg-white w-[70%] h-full'>
+            <div className='bg-white w-[70%] h-full rounded-lg p-5'>
               <AppLineChart/>
             </div>
-            <div className='bg-white w-[28%] h-full ml-[20px]'>
+            <div className='bg-white w-[28%] h-full ml-[20px] rounded-lg p-5'>
               <DonutChart/>
             </div>
 
           </div>
-          <div className='bg-white w-full w-[900px] h-[316px] mt-5'>
+          <div className='bg-white w-full w-[900px] h-[316px] mt-5 rounded-lg p-5'>
             <AppBarChart/>
           </div>
           </div>
           :switchOpen=="two"?
           <div className=''>
           <div className=' w-full h-[316px] mt-5 flex '>
-            <div className='bg-white w-[70%] h-full'>
+            <div className='bg-white w-[70%] h-full rounded-lg p-5'>
               <AppLineChart/>
             </div>
-            <div className='bg-white w-[28%] h-full ml-[20px]'>
+            <div className='bg-white w-[28%] h-full ml-[20px] rounded-lg p-5'>
               <DonutChart/>
             </div>
 
           </div>
-          <div className='bg-white w-full w-[900px] h-[316px] mt-5'>
+          <div className='bg-white w-full w-[900px] h-[316px] mt-5 rounded-lg p-5'>
             <AppBarChart/>
           </div>
           </div>

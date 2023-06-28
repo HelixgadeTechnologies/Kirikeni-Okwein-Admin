@@ -130,8 +130,8 @@ function addcontent() {
           </div>
         </Header>
         <div className="flex space-x-4 my-5 items-center">
-          <Link href={"/main/coursemodule"}>
-            <WestIcon />
+          <Link href={"/main/courselevels"}>
+            <WestIcon  style={{color:"#5141A4"}}/>
           </Link>
           <div className=" my-1 bg-white py-2 px-4">
             <p>

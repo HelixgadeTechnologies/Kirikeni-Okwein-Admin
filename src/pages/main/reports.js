@@ -209,13 +209,13 @@ function Reports() {
           <div className="flex justify-end w-full space-x-5">
             <button
               type="submit"
-              className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-5 px-10"
+              className="bg-white text-[#005259] border border-[#005259] rounded mt-4  py-4 px-10"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="bg-[#005259] text-white rounded mt-4  py-5 px-5"
+              className="bg-[#005259] text-white rounded mt-4  py-4 px-10"
             >
               Save
             </button>
@@ -444,21 +444,21 @@ function Reports() {
             </div>
           </div>
         ) : (
-          <div className=" mt-5 p-5 overflow-scroll overflow-x-auto w-[900px] max-h-[600px] scrollbar scrollbar-thumb-gray-500 scrollbar-track w-[70vw]">
+          <div className=" mt-5 p-5 overflow-scroll overflow-x-auto w-full max-h-[600px] scrollbar scrollbar-thumb-gray-500 scrollbar-track w-full">
             <h2 className="font-bold py-4">Report List</h2>
             <table className="min-w-full bg-white text-[#434D64]">
               <thead className="bg-[#F9FAFB] text-[#727A8B]">
                 <tr>
-                  <th className="py-3 px-4 border-b-2 border-gray-300 text-left">
+                  <th className="py-3 px-6 border-b-2 border-gray-300 text-left">
                     REPORT TITLE
                   </th>
-                  <th className="py-3 px-4 border-b-2 border-gray-300 text-left">
+                  <th className="py-3 px-6 border-b-2 border-gray-300 text-left">
                     DATE CREATED
                   </th>
-                  <th className="py-3 px-4 border-b-2 border-gray-300 text-left">
+                  <th className="py-3 px-6 border-b-2 border-gray-300 text-left">
                     STATUS
                   </th>
-                  <th className="py-3 px-4 border-b-2 border-gray-300 text-left">
+                  <th className="py-3 px-6 border-b-2 border-gray-300 text-left">
                     ACTION
                   </th>
                 </tr>
@@ -466,18 +466,18 @@ function Reports() {
               <tbody>
                 {[0, 1, 2, 3, 4, 5].map((row, index) => (
                   <tr key={index}>
-                    <td className="py-4 px-4 border-b border-gray-300 text-left">
+                    <td className="py-4 px-6 border-b border-gray-300 text-left">
                       Course Progress Report
                     </td>
-                    <td className="py-4 px-4 border-b border-gray-300 text-left">
+                    <td className="py-4 px-6 border-b border-gray-300 text-left">
                       12/12/22
                     </td>
-                    <td className="py-4 px-4 border-b border-gray-300 text-left ">
+                    <td className="py-4 px-6 border-b border-gray-300 text-left ">
                       <p className="border border-green text-center border-[#03D858] rounded text-[#03D858]">
                         Active
                       </p>
                     </td>
-                    <td className="py-4 px-4 border-b border-gray-300 text-left">
+                    <td className="py-4 px-6 border-b border-gray-300 text-left">
                       <button className="border border-green text-center border-gray-400 px-5 py-0 text-gray-400 ml-2 rounded">
                         View
                       </button>
