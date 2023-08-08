@@ -6,60 +6,61 @@ import Header from "@/components/Header";
 import AddIcon from "@mui/icons-material/Add";
 import Modal2 from "@/components/Modal2";
 import DragAndDropBox from "@/components/DragAndDropBox";
-import WestIcon from '@mui/icons-material/West';
 import Link from "next/link";
+import WestIcon from "@mui/icons-material/West";
 
 function CourseManagement() {
-    const [switchOpen, setSwitchOpen] = useState("one");
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const ModalControl = () => {
-      setIsModalOpen(!isModalOpen);
-    };
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      // Perform form submission or validation logic
-      // ...
-  
-      // Reset form fields
-      // setName("");
-      // setEmail("");
-      // setPassword("");
-      // setStatus("");
-    };
-    const cardData = [
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-  
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-      {
-        image: "/image1.jpg",
-        heading: "Introduction to Kirikeni",
-        paragraph: "Learn basic pronunciations in the Kirikeni language.",
-      },
-    ];
+  const [switchOpen, setSwitchOpen] = useState("one");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const ModalControl = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform form submission or validation logic
+    // ...
+
+    // Reset form fields
+    // setName("");
+    // setEmail("");
+    // setPassword("");
+    // setStatus("");
+  };
+  const cardData = [
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+    {
+      image: "/image1.jpg",
+      heading: "Introduction to Kirikeni",
+      paragraph: "Learn basic pronunciations in the Kirikeni language.",
+    },
+  ];
+
 
 
 
@@ -181,13 +182,13 @@ function CourseManagement() {
     ) : null
   }
     <Layout isActivePage="COURSES MANAGEMENT">
-    <Header>
+      <Header>
         <div className="bg-white flex justify-between w-full mt-3 h-[96px] items-center px-10 py-5 rounded">
           <div>
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
           <button
-            className="bg-[#005259] text-white rounded-[4px] py-4 px-5 h-[56px]"
+            className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded"
             onClick={ModalControl}
           >
             <AddIcon /> Add Course
@@ -214,57 +215,44 @@ function CourseManagement() {
       </div> */}
       </Header>
       <div className="flex space-x-4 my-5 items-center">
-          <Link href={"/main/coursesmanagement"}>
-            <WestIcon style={{color:"#5141A4"}}/>
+          <Link href={"/main/coursemodule"}>
+            <WestIcon style={{color:"#5141A4"}} />
           </Link>
-          <div className=" my-1 bg-white py-1 px-5 rounded">
-            <p className="text-white">
+          <div className=" my-1 bg-white py-2 px-4">
+            <p>
               Courses Management{" "}
-              {/* <span className="text-[#5141A4]"> / Course Modules</span> */}
+              <span className="text-[#5141A4]">/ Courses</span>
             </p>
           </div>
         </div>
-     <p className="text-[16px] pt-3">Courses</p>
+      <p className="text-[16px] ">Courses</p>
       <div className="bg-white mt-5 overflow-scroll max-h-[500px] scrollbar scrollbar-thumb-gray-500 scrollbar-track rounded">
-        <div className="">
-          <div className="">
-      <table className="w-full">
-        <thead className="bg-[#F9FAFB] text-[#727A8B] text-[13px] text-left">
-          <tr>
-            <th className="py-2 pl-5 pr-16 font-[300] mx-10">COURSE NO</th>
-            <th className="py-2 pl-5 pr-16 font-[300] mx-10">COURSE TITLE</th>
-            <th className="py-2 pl-5 pr-16 font-[300] mx-10">COURSE DESCRIPTION</th>
-            <th className="py-2 pl-5 font-[300] mx-10">ACTION</th>
-          </tr>
-        </thead>
-        <tbody className="bg-white">    
-          {/* Table body rows */}
-          {
-            [1,2,3,4,5,6,7,8,9,10].map((num,index)=>(
-                <tr key={index} className={"text-[#434D64] font-[300] text-[13px] border-b  "}>
-                <td className="py-2 pl-5 pr-20">Module {index + 1}</td>
-                <td className="py-2 pl-5 pr-20">Greetings in Wakirike</td>
-                <td className="py-2 pl-5 pr-20">Lorem ipsum dolor sit amet</td>
-                <td className="py-2 pl-5 pr-10">
-                <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-[11px] px-5 rounded mr-2" href="/main/coursemodule">
-                    View
-                  </Link>
-                  <button className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-5 rounded mr-2">
-                    Edit
-                  </button>
-                  <button className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-5 rounded">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))
-          }
+        <div className="p-5">
+          <div className=" my-1 relative">
+            <input
+              type="text"
+              className="py-2 px-8 py-2 mx-[2px] pl-16 rounded-lg border border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[500px]  bg-[#F3F4F5] bg-opacity-20 text-black"
+              placeholder="Search"
+            />
+            <div className="absolute inset-y-0 left-3 pr-3 flex items-center pointer-events-none">
+              <SearchIcon
+                className="mx-5 my-4 text-gray-400 "
+                style={{ color: "#D0D3D8" }}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap mx-0 my-4">
+            {cardData.map((card, index) => (
+              <div
+                key={index}
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 px-2 mb-8"
+              >
+                <CourseCard heading={card.heading} paragraph={card.paragraph} />
+              </div>
+            ))}
 
-
-          {/* Add more rows as needed */}
-        </tbody>
-      </table>
-    </div>
+            <p className="text-[#5141A4] px-3">show more</p>
+          </div>
         </div>
       </div>
     </Layout>

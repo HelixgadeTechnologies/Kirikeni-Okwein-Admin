@@ -156,7 +156,7 @@ function CourseModule() {
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
           <button
-            className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+            className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
             onClick={ModalControl}
           >
             <AddIcon /> Add Course
@@ -198,23 +198,23 @@ function CourseModule() {
         <div className="">
           <div className="">
       <table className="w-full">
-        <thead className="bg-[#F9FAFB] text-[#727A8B] text-left">
+        <thead className="bg-[#F9FAFB] text-[#727A8B] text-[13px] text-left">
           <tr>
-            <th className="py-2 pl-5">MODULE NUMBER</th>
-            <th className="py-2 pl-5">MODULE TITLE</th>
-            <th className="py-2 pl-5">MODULE DESCRIPTION</th>
-            <th className="py-2 pl-5">ACTION</th>
+            <th className="py-2 pl-5 pr-14 font-[300]">MODULE NUMBER</th>
+            <th className="py-2 pl-5 pr-14 font-[300]">MODULE TITLE</th>
+            <th className="py-2 pl-5 pr-14 font-[300]">MODULE DESCRIPTION</th>
+            <th className="py-2 pl-5 font-[300] ">ACTION</th>
           </tr>
         </thead>
         <tbody className="bg-white">
           {/* Table body rows */}
           {
             [1,2,3,4,5,6,7,8,9,10].map((num,index)=>(
-                <tr key={index} className={"text-[#434D64]"}>
-                <td className="py-2 px-4">Module {index + 1}</td>
-                <td className="py-2 px-4">Greetings in Wakirike</td>
-                <td className="py-2 px-4">Lorem ipsum dolor sit amet</td>
-                <td className="py-2 px-4">
+                <tr key={index} className={"text-[#434D64] font-[300] text-[13px] border-b"}>
+                <td className="py-2 pl-5 pr-16">Module {index + 1}</td>
+                <td className="py-2 pl-5 pr-16">Greetings in Wakirike</td>
+                <td className="py-2 pl-5 pr-16">Lorem ipsum dolor sit amet</td>
+                <td className="py-2 pl-5 ">
                 <Link className="border border-[#D0D3D8] text-[#005259] bg-transparent py-2 px-4 rounded mr-2" href="/main/courselevels">
                     View
                   </Link>

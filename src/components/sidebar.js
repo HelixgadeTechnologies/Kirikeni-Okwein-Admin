@@ -15,8 +15,8 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 const SideBar = ({isActivePage, classn}) => {
     // const isActivePage = "true";
   return (
-    <div className={`flex flex-col w-[270px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ${classn}`}>
-      <div className="flex justify-between px-3">
+    <div className={`flex flex-col w-[245px] h-[98vh] m-auto ml-2 rounded-tr-lg rounded-br-lg bg-[#00484E] py-5 ${classn}`}>
+      <div className="flex justify-between px-3 ">
         <div className="h-7 w-7 bg-white rounded-full">
           <Image src={Logo}  alt="" className="w-4 h-6 ml-2"/>
         </div>
@@ -24,10 +24,10 @@ const SideBar = ({isActivePage, classn}) => {
           <KeyboardDoubleArrowLeftIcon style={{fontSize:"25px"}}/>
         </div>
       </div>
-      <div className="relative my-5 px-5 ">
+      <div className="relative my-5 mb-[60px] mt-9 px-5 ">
         <input
           type="text"
-          className="py-2 px-4 py-3 mx-[2px] pl-10 rounded-md border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[98%]  bg-[#F3F4F5] bg-opacity-20 text-white "
+          className="py-2 px-4 py-3 mx-[2px] pl-10 rounded-md bg-opacity-5 border-gray-300 focus:ring focus:border-blue-500 focus:outline-none w-[98%]  bg-[#D0D3D8] bg-opacity-20 text-white "
           placeholder="Search"
         />
         <div className="absolute inset-y-0 left-3 pr-3 flex items-center pointer-events-none">
@@ -42,46 +42,55 @@ const SideBar = ({isActivePage, classn}) => {
         <DashboardCustomizeIcon style={{margin:"0 10px"}}/>
         <p className={`pl-2 capitalize  ${isActivePage =="DASHBOARD" ? 'text-white' : 'text-[#A1A6B1]'}`}>DASHBOARD</p>
       </a> */}
-      <Link href={"/main/coursesmanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
-        <div className={`px-3 ${isActivePage =="COURSES MANAGEMENT" ?'text-white':"text-[#A1A6B1]"}`}>
-          <ManageSearchIcon />
+      <Link href={"/main/coursesmanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b-[1px] border-[#727A8B] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}` } >
+        <div className="flex items-end justify-center ">
+          <div className={`px-3 ${isActivePage =="COURSES MANAGEMENT" ?'text-white':"text-[#A1A6B1]"}`}>
+            <ManageSearchIcon className="text-[22px]"/>
+          </div>
+            <p className={` h-full capitalize text-[12px] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
+
         </div>
-          <p className={` capitalize text-[13px] ${isActivePage =="COURSES MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>COURSES MANAGEMENT</p>
        
       </Link>
-      <Link href={"/main/usermanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <Link href={"/main/usermanagement"} className={`flex items-center justify-start text-white py-3 px-3  border-b-[1px] border-[#727A8B] ${isActivePage =="USER MANAGEMENT" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <div className="flex items-end justify-center ">
         <div className={`px-3 ${isActivePage =="USER MANAGEMENT" ?'text-white':"text-[#A1A6B1]"}`}>
-          <ManageAccountsIcon  />
+          <ManageAccountsIcon className="text-[22px]" />
           </div>
-          <p className={` capitalize text-[13px] ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
-        {/* </a> */}
+          <p className={` capitalize text-[12px] ${isActivePage =="USER MANAGEMENT" ? 'text-white' : 'text-[#A1A6B1]'}`}>USER MANAGEMENT</p>
+        </div>
       </Link>
-      <Link href={"/main/chat"} className={`flex items-center justify-start text-white py-3 px-3  border-b border-[#A1A6B1] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
-        {/* <a > */}
+      <Link href={"/main/chat"} className={`flex items-center justify-start text-white py-3 px-3  border-b-[1px] border-[#727A8B] ${isActivePage =="CHAT MESSAGING" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`} >
+      <div className="flex items-end justify-center ">
         <div className={`px-3 ${isActivePage =="CHAT MESSAGING" ?'text-white':"text-[#A1A6B1]"}`}>
-          <ForumIcon  />
+          <ForumIcon  className="text-[22px]" />
         </div>
-          <p className={` capitalize text-[13px] ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
-      
+          <p className={` capitalize text-[12px] ${isActivePage =="CHAT MESSAGING" ? 'text-white' : 'text-[#A1A6B1]'}`}>CHAT MESSAGING</p>
+      </div>
       </Link>
-      <Link href={"/main/settings"} className={`flex items-center justify-start text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <Link href={"/main/settings"} className={`flex items-center justify-start text-white py-3 px-3 border-b-[1px] border-[#727A8B] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <div className="flex items-end justify-center ">
         <div className={`px-3 ${isActivePage =="ACCOUNT SETTINGS" ?'text-white':"text-[#A1A6B1]"}`}>
-          <TuneIcon />
+          <TuneIcon className="text-[22px]"/>
         </div>
-          <p className={`capitalize text-[13px] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
-        
+          <p className={`capitalize text-[12px] ${isActivePage =="ACCOUNT SETTINGS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ACCOUNT SETTINGS</p>
+        </div>
       </Link>
-      <Link href={"/main/analytics"} className={`flex items-center justify-start text-white py-3 px-3 border-b border-[#A1A6B1] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
-      <div className={`px-3 ${isActivePage =="ANALYTICS" ?'text-white':"text-[#A1A6B1]"}`}>
-        <InsightsIcon />
+      <Link href={"/main/analytics"} className={`flex items-center justify-start text-white py-3 px-3 border-b-[1px] border-[#727A8B] ${isActivePage =="ANALYTICS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <div className="flex items-end justify-center ">
+        <div className={`px-3 ${isActivePage =="ANALYTICS" ?'text-white':"text-[#A1A6B1]"}`}>
+          <InsightsIcon className="text-[22px]" />
+        </div>
+          <p className={`capitalize text-[12px] ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
       </div>
-        <p className={`capitalize text-[13px] ${isActivePage =="ANALYTICS" ? 'text-white' : 'text-[#A1A6B1]'}`}>ANALYTICS</p>
       </Link>
-      <Link href={"/main/reports"} className={`flex items-center justify-start text-white py-3 px-2 border-b border-[#A1A6B1] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
-      <div className={`px-3 ${isActivePage =="REPORTS" ?'text-white':"text-[#A1A6B1]"}`}>
-        <SummarizeIcon />
+      <Link href={"/main/reports"} className={`flex items-center justify-start text-white py-3 px-3 border-b-[1px] border-[#727A8B] ${isActivePage =="REPORTS" ? 'text-white bg-[#009A96]' : 'text-[#A1A6B1]'}`}>
+      <div className="flex items-end justify-center ">
+        <div className={`px-3 ${isActivePage =="REPORTS" ?'text-white':"text-[#A1A6B1]"}`}>
+          <SummarizeIcon className="text-[22px]"/>
+        </div>
+          <p className={` capitalize text-[12px] ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>
       </div>
-        <p className={` capitalize text-[13px] ${isActivePage =="REPORTS" ? 'text-white' : 'text-[#A1A6B1]'}`}>REPORTS</p>
       </Link>
 
     </div>

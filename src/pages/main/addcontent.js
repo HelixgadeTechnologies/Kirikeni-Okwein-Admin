@@ -115,13 +115,13 @@ function addcontent() {
             </div>
             <div className="flex space-x-4">
               <button
-                className="text-[#005259] bg-transparent border border-gray-300  py-4 px-5 h-[56px]"
+                className="text-[#005259] bg-transparent border border-gray-300  py-4 px-5 h-[56px] rounded-[4px]"
                 onClick={ModalControl}
               >
                 Save Draft
               </button>
               <button
-                className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+                className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
                 onClick={ModalControl}
               >
                 Submit Lesson

@@ -69,7 +69,7 @@ function Chat() {
             </div> */}
           </div>
           <button
-            className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+            className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
             // onClick={ModalControl}
           >
             <AddIcon />

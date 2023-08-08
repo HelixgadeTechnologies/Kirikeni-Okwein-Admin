@@ -125,7 +125,7 @@ function CourseLevels() {
             <p className="text-[20px] font-bold">Course Management</p>
           </div>
           <button
-            className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+            className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
             onClick={ModalControl}
           >
             <AddIcon /> Add Level

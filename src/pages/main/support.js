@@ -53,11 +53,11 @@ function Support() {
             </div>
             {
               switchOpen=="one"? <button
-              className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+              className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
             >
               <AddIcon /> Delete Admin
             </button>: <button
-              className="bg-[#005259] text-white py-4 px-5 h-[56px]"
+              className="bg-[#005259] text-white py-4 px-5 h-[56px] rounded-[4px]"
             //   onClick={ModalControl4}
             >
               <AddIcon /> Edit Admin
