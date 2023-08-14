@@ -5,6 +5,7 @@ import Modal2 from "@/components/Modal2";
 import WestIcon from "@mui/icons-material/West";
 import Link from "next/link";
 import AddIcon from "@mui/icons-material/Add";
+import axios from "../../axios";
 
 function addcontent() {
   const [switchOpen, setSwitchOpen] = useState("one");
@@ -12,13 +13,12 @@ function addcontent() {
   const ModalControl = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  // return(
-  //   <></>
-  // )
 
   return (
     <>
